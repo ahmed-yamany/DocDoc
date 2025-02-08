@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:DocDesignSystem/DocDesignSystem.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:DocDoc/DocDoc.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:SPMs/Coordinator">
+   </FileRef>
+   <FileRef
+      location = "group:SPMs/HTTPClient">
+   </FileRef>
+   <FileRef
+      location = "group:SPMs/Infrustructor">
+   </FileRef>
+   <FileRef
+      location = "group:SPMs/Utilities">
+   </FileRef>
+</Workspace>
