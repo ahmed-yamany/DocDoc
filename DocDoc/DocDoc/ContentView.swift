@@ -6,15 +6,17 @@
 //
 
 import SwiftUI
+import DocDesignSystem
 
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
+            DesignSystem.Tokens.Icons.alert
                 .imageScale(.large)
                 .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text(L10n.hello)
         }
+        .background(.blue)
         .padding()
     }
 }
