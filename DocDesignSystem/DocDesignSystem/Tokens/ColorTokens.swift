@@ -7,7 +7,11 @@
 
 import SwiftUI
 
-enum ColorTokens {
-    static var primaryButtonColor: Color { .blue60 }
-    static var primaryBackGroundColor: Color { .white }
+extension DesignSystem.Tokens {
+    enum Colors {
+        static var primaryButtonColor: Color { .blue60 }
+        static var primaryBackGroundColor: Color { .white }
+    }
+    
 }
+

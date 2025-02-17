@@ -7,12 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7361CA5A2D63D66300968D6E /* DocDesignSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7361CA592D63D66300968D6E /* DocDesignSystem.framework */; };
+		7361CA5B2D63D66300968D6E /* DocDesignSystem.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7361CA592D63D66300968D6E /* DocDesignSystem.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		73DA6FAE2D57931600BA8114 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DA6FAB2D57931600BA8114 /* ContentView.swift */; };
 		73DA6FAF2D57931600BA8114 /* DocDocApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DA6FAC2D57931600BA8114 /* DocDocApp.swift */; };
 		73DA6FB12D57931600BA8114 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73DA6FAA2D57931600BA8114 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		7361CA5C2D63D66300968D6E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7361CA5B2D63D66300968D6E /* DocDesignSystem.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		7361CA592D63D66300968D6E /* DocDesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DocDesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		73C688792D63D47C00F91C06 /* DocDesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DocDesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73DA6F972D5792FA00BA8114 /* DocDoc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DocDoc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73DA6FAA2D57931600BA8114 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		73DA6FAB2D57931600BA8114 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -24,16 +42,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7361CA5A2D63D66300968D6E /* DocDesignSystem.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		73C688782D63D47B00F91C06 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7361CA592D63D66300968D6E /* DocDesignSystem.framework */,
+				73C688792D63D47C00F91C06 /* DocDesignSystem.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		73DA6F8E2D5792FA00BA8114 = {
 			isa = PBXGroup;
 			children = (
 				73DA6FAD2D57931600BA8114 /* DocDoc */,
+				73C688782D63D47B00F91C06 /* Frameworks */,
 				73DA6F982D5792FA00BA8114 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -66,6 +95,7 @@
 				73DA6F932D5792FA00BA8114 /* Sources */,
 				73DA6F942D5792FA00BA8114 /* Frameworks */,
 				73DA6F952D5792FA00BA8114 /* Resources */,
+				7361CA5C2D63D66300968D6E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

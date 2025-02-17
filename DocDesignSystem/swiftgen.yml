@@ -1,0 +1,55 @@
+input_dir: DocDesignSystem/
+output_dir: DocDesignSystem/
+
+
+fonts:
+  inputs:
+    - Foundations/Typography/Fonts
+  outputs:
+    templateName: swift5
+    output: Foundations/Typography/FontFamily.swift
+    params:
+        publicAccess: true
+
+files:
+  inputs:
+    - Foundations/Files
+#  filter: .+\.mp4$
+  outputs:
+    templateName: structured-swift5
+    output: Foundations/Files/Files+Generated.swift
+    params:
+        publicAccess: true
+
+#xcassets:
+#  inputs:
+#    - Foundation/Colors/Colors.xcassets
+#    
+#  outputs:
+#    - templateName: swift5
+#      output: Foundation/Colors/FoundationColors.swift
+#      params:
+#        enumName: FoundationColors
+#        publicAccess: true
+
+#xcassets:
+#  inputs:
+#    - Foundation/Icons/Icons.xcassets
+#    
+#  outputs:
+#    - templateName: swift5
+#      output: Foundation/Icons/FoundationIcons.swift
+#      params:
+#        enumName: FoundationIcons
+#        publicAccess: true
+        
+#xcassets:
+#  inputs:
+#    - Foundation/Assets/Assets.xcassets
+#    
+#  outputs:
+#    - templateName: swift5
+#      output: Foundation/Assets/FoundationAssets.swift
+#      params:
+#        enumName: FoundationAssets
+#        publicAccess: true
