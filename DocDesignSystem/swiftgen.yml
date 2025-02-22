@@ -2,14 +2,14 @@ input_dir: DocDesignSystem/
 output_dir: DocDesignSystem/
 
 
-fonts:
-  inputs:
-    - Foundations/Typography/Fonts
-  outputs:
-    templateName: swift5
-    output: Foundations/Typography/FontFamily.swift
-    params:
-        publicAccess: true
+#fonts:
+#  inputs:
+#    - Foundations/Typography/Fonts
+#  outputs:
+#    templateName: swift5
+#    output: Foundations/Typography/FontFamily.swift
+#    params:
+#        publicAccess: true
 
 files:
   inputs:
@@ -53,3 +53,13 @@ files:
 #      params:
 #        enumName: FoundationAssets
 #        publicAccess: true
+
+strings:
+   inputs:
+     - Localization/StringFiles/Localizable/en.lproj
+   outputs:
+     - templateName: structured-swift5
+       output: Localization/StringFiles/Strings+Generated.swift
+       params:
+        lookupFunction: swiftgen_localized(forKey:table:fallbackValue:)
+        publicAccess: true

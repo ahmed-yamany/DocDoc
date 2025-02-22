@@ -10,10 +10,6 @@
   import SwiftUI
 #endif
 
-// Deprecated typealiases
-@available(*, deprecated, renamed: "FontConvertible.Font", message: "This typealias will be removed in SwiftGen 7.0")
-public typealias Font = FontConvertible.Font
-
 // swiftlint:disable superfluous_disable_command file_length implicit_return
 
 // MARK: - Fonts

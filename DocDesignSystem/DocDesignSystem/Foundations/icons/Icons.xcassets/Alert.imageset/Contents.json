@@ -3,10 +3,23 @@
     {
       "filename" : "Alert.svg",
       "idiom" : "universal"
+    },
+    {
+      "filename" : "calendar-remove.svg",
+      "idiom" : "universal",
+      "locale" : "ar"
+    },
+    {
+      "filename" : "Alert 2.svg",
+      "idiom" : "universal",
+      "locale" : "en"
     }
   ],
   "info" : {
     "author" : "xcode",
     "version" : 1
+  },
+  "properties" : {
+    "localizable" : true
   }
 }

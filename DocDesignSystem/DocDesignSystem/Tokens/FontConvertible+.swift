@@ -7,23 +7,26 @@
 
 import Foundation
 
-extension Locale {
-    var lange: Languages {
-        switch identifier {
-        case "en": .english
-        default: .arabic
-        }
-    }
-}
-
-enum Languages {
-    case english
-    case arabic
-}
-
-public extension DesignSystem.Tokens.Typography {
+/// A set of font styles that dynamically switch between fonts based on language settings.
+///
+/// This ensures consistent typography across different languages.
+/// - **English:** Uses `Inter` font family.
+/// - **Arabic:** Uses `Cairo` font family.
+///
+/// ## Usage
+/// ```swift
+/// Text("Hello, World!")
+///    .font(weight.swiftUIFont(size: 12, relativeTo: .title))
+/// ```
+///
+/// ## Considerations
+/// - Uses `LocalizationSettings.shared.getLanguage()` to determine language.
+/// - Supports multiple font weights for flexibility in design.
+public extension FontConvertible {
+    
+    /// The default regular font.
     static var regular: FontConvertible {
-        switch Locale.current.lange {
+        switch LocalizationSettings.shared.getLanguage() {
         case .english:
             FontFamily.Inter.regular
         default:
@@ -31,8 +34,9 @@ public extension DesignSystem.Tokens.Typography {
         }
     }
 
+    /// A black-weight font.
     static var black: FontConvertible {
-        switch Locale.current.lange {
+        switch LocalizationSettings.shared.getLanguage() {
         case .english:
             FontFamily.Inter.black
         case .arabic:
@@ -40,8 +44,9 @@ public extension DesignSystem.Tokens.Typography {
         }
     }
 
+    /// A bold-weight font.
     static var bold: FontConvertible {
-        switch Locale.current.lange {
+        switch LocalizationSettings.shared.getLanguage() {
         case .english:
             FontFamily.Inter.bold
         case .arabic:
@@ -49,8 +54,9 @@ public extension DesignSystem.Tokens.Typography {
         }
     }
 
+    /// An extra-bold-weight font.
     static var extraBold: FontConvertible {
-        switch Locale.current.lange {
+        switch LocalizationSettings.shared.getLanguage() {
         case .english:
             FontFamily.Inter.extraBold
         case .arabic:
@@ -58,8 +64,9 @@ public extension DesignSystem.Tokens.Typography {
         }
     }
 
+    /// An extra-light-weight font.
     static var extraLight: FontConvertible {
-        switch Locale.current.lange {
+        switch LocalizationSettings.shared.getLanguage() {
         case .english:
             FontFamily.Inter.extraLight
         case .arabic:
@@ -67,8 +74,9 @@ public extension DesignSystem.Tokens.Typography {
         }
     }
 
+    /// A light-weight font.
     static var light: FontConvertible {
-        switch Locale.current.lange {
+        switch LocalizationSettings.shared.getLanguage() {
         case .english:
             FontFamily.Inter.light
         case .arabic:
@@ -76,8 +84,9 @@ public extension DesignSystem.Tokens.Typography {
         }
     }
 
+    /// A medium-weight font.
     static var medium: FontConvertible {
-        switch Locale.current.lange {
+        switch LocalizationSettings.shared.getLanguage() {
         case .english:
             FontFamily.Inter.medium
         case .arabic:
@@ -85,8 +94,9 @@ public extension DesignSystem.Tokens.Typography {
         }
     }
 
+    /// A semi-bold-weight font.
     static var semiBold: FontConvertible {
-        switch Locale.current.lange {
+        switch LocalizationSettings.shared.getLanguage() {
         case .english:
             FontFamily.Inter.semiBold
         case .arabic:

@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension DesignSystem.Tokens.Mesurments {
+public extension DesignSystem.Tokens.Measurements {
     enum Height {
         static let primaryButton: CGFloat = 52.0
         static let primaryTextField: CGFloat = 55.0
