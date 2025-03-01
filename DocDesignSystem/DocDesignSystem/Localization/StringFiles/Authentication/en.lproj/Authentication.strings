@@ -1,0 +1,10 @@
+/* 
+  Authentication.strings
+  DocDesignSystem
+
+  Created by Ahmed Yamany on 01/03/2025.
+  
+*/
+
+"email" = "Email";
+"password" = "Password";

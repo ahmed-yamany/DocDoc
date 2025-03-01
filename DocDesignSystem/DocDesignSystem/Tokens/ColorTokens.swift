@@ -9,13 +9,17 @@ import SwiftUI
 
 extension DesignSystem.Tokens.Colors {
     static let primary: Color = .blue60
+    static let tint: Color = .gray100
     
-
+    static var primaryBackGroundColor: Color { .white }
+    
     // MARK: - primary button
 
     static let primaryButtonBackground: Color = Self.primary
     static let primaryButtonPressBackground: Color = .gray50
     static let primaryButtonForgroundColor: Color = .gray20
     
-    static var primaryBackGroundColor: Color { .white }
+    // MARK: Primary TextField
+    static let primaryTextFieldBackground: Color = .gray40
+    static let primaryTextFieldBorder: Color = .gray60
 }

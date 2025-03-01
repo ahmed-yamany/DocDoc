@@ -25,6 +25,11 @@
 		735DAFDE2D6A5EA600A95EA5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 735DAFDC2D6A5EA600A95EA5 /* Localizable.strings */; };
 		735DB0552D6A5FCB00A95EA5 /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735DB0542D6A5FCB00A95EA5 /* Strings+Generated.swift */; };
 		73795DF52D732A620038DF24 /* PrimaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73795DF42D732A620038DF24 /* PrimaryButtonStyle.swift */; };
+		73795F8D2D7336AC0038DF24 /* PrimaryTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73795F8C2D7336AC0038DF24 /* PrimaryTextField.swift */; };
+		73795F8F2D733C1F0038DF24 /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73795F8E2D733C1F0038DF24 /* EmailTextField.swift */; };
+		73795F932D733C670038DF24 /* Authentication.strings in Resources */ = {isa = PBXBuildFile; fileRef = 73795F912D733C670038DF24 /* Authentication.strings */; };
+		73795F962D733D7C0038DF24 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73795F952D733D7C0038DF24 /* PasswordTextField.swift */; };
+		7379605B2D733FC20038DF24 /* PhoneTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7379605A2D733FC20038DF24 /* PhoneTextField.swift */; };
 		739D1CED2D63D7A9006E2DE3 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 739D1CEB2D63D7A9006E2DE3 /* Colors.xcassets */; };
 		739D1CEE2D63D7A9006E2DE3 /* Asset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 739D1CE92D63D7A9006E2DE3 /* Asset.xcassets */; };
 		739D1CF92D63D7BB006E2DE3 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 739D1CF02D63D7BB006E2DE3 /* Icons.xcassets */; };
@@ -61,6 +66,12 @@
 		735DAFDF2D6A5EB500A95EA5 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		735DB0542D6A5FCB00A95EA5 /* Strings+Generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
 		73795DF42D732A620038DF24 /* PrimaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonStyle.swift; sourceTree = "<group>"; };
+		73795F8C2D7336AC0038DF24 /* PrimaryTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryTextField.swift; sourceTree = "<group>"; };
+		73795F8E2D733C1F0038DF24 /* EmailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTextField.swift; sourceTree = "<group>"; };
+		73795F922D733C670038DF24 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Authentication.strings; sourceTree = "<group>"; };
+		73795F942D733C6B0038DF24 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Authentication.strings; sourceTree = "<group>"; };
+		73795F952D733D7C0038DF24 /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
+		7379605A2D733FC20038DF24 /* PhoneTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneTextField.swift; sourceTree = "<group>"; };
 		739D1CE92D63D7A9006E2DE3 /* Asset.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Asset.xcassets; sourceTree = "<group>"; };
 		739D1CEB2D63D7A9006E2DE3 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		739D1CF02D63D7BB006E2DE3 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
@@ -114,6 +125,7 @@
 		735DAFDB2D6A5E9800A95EA5 /* StringFiles */ = {
 			isa = PBXGroup;
 			children = (
+				73795F902D733C510038DF24 /* Authentication */,
 				735DB0532D6A5F9400A95EA5 /* Localizable */,
 				735DB0542D6A5FCB00A95EA5 /* Strings+Generated.swift */,
 				735DAFC32D6A032800A95EA5 /* swiftgen_localized.swift */,
@@ -143,6 +155,25 @@
 				73795DF42D732A620038DF24 /* PrimaryButtonStyle.swift */,
 			);
 			path = Buttons;
+			sourceTree = "<group>";
+		};
+		73795F8B2D7336A70038DF24 /* TextFields */ = {
+			isa = PBXGroup;
+			children = (
+				73795F8C2D7336AC0038DF24 /* PrimaryTextField.swift */,
+				73795F8E2D733C1F0038DF24 /* EmailTextField.swift */,
+				73795F952D733D7C0038DF24 /* PasswordTextField.swift */,
+				7379605A2D733FC20038DF24 /* PhoneTextField.swift */,
+			);
+			path = TextFields;
+			sourceTree = "<group>";
+		};
+		73795F902D733C510038DF24 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				73795F912D733C670038DF24 /* Authentication.strings */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 		739D1CEA2D63D7A9006E2DE3 /* Assets */ = {
@@ -276,6 +307,7 @@
 		73DA71262D579EE200BA8114 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				73795F8B2D7336A70038DF24 /* TextFields */,
 				73795DF32D732A4C0038DF24 /* Buttons */,
 				73795D2F2D731D3F0038DF24 /* Text */,
 			);
@@ -362,6 +394,7 @@
 				735DAFDE2D6A5EA600A95EA5 /* Localizable.strings in Resources */,
 				739D1CFF2D63D7E5006E2DE3 /* Inter.ttf in Resources */,
 				739D1CEE2D63D7A9006E2DE3 /* Asset.xcassets in Resources */,
+				73795F932D733C670038DF24 /* Authentication.strings in Resources */,
 				739D1D102D63DA06006E2DE3 /* ios.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -396,12 +429,15 @@
 			files = (
 				7324FB222D6A6D1B0008B2A5 /* Language+Bundle.swift in Sources */,
 				739D1D122D63DA3D006E2DE3 /* Files+Generated.swift in Sources */,
+				73795F962D733D7C0038DF24 /* PasswordTextField.swift in Sources */,
 				735DAFDA2D6A573500A95EA5 /* DesignSystem+Foundations.swift in Sources */,
 				739D1D0D2D63D9F2006E2DE3 /* FontFamily.swift in Sources */,
 				739D1D192D63DA68006E2DE3 /* AssetsTokens.swift in Sources */,
+				73795F8F2D733C1F0038DF24 /* EmailTextField.swift in Sources */,
 				739D1D1A2D63DA68006E2DE3 /* FontConvertible+.swift in Sources */,
 				73795DF52D732A620038DF24 /* PrimaryButtonStyle.swift in Sources */,
 				735DAFC42D6A032800A95EA5 /* swiftgen_localized.swift in Sources */,
+				73795F8D2D7336AC0038DF24 /* PrimaryTextField.swift in Sources */,
 				735DAFD22D6A44D300A95EA5 /* Text+Font.swift in Sources */,
 				739D1D1B2D63DA68006E2DE3 /* ColorTokens.swift in Sources */,
 				735DAFCB2D6A0B1700A95EA5 /* FM+Padding.swift in Sources */,
@@ -418,6 +454,7 @@
 				739D1D952D63E533006E2DE3 /* TM+Heights.swift in Sources */,
 				735DAFC22D6A02C300A95EA5 /* view+configureLocalization.swift in Sources */,
 				7324FB1E2D6A6CDE0008B2A5 /* Language.swift in Sources */,
+				7379605B2D733FC20038DF24 /* PhoneTextField.swift in Sources */,
 				735DAFC02D6A027C00A95EA5 /* LocalizationSettings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,6 +469,15 @@
 				735DAFDF2D6A5EB500A95EA5 /* ar */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		73795F912D733C670038DF24 /* Authentication.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				73795F922D733C670038DF24 /* en */,
+				73795F942D733C6B0038DF24 /* ar */,
+			);
+			name = Authentication.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

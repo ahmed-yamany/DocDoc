@@ -16,7 +16,7 @@ struct DocDocApp: App {
             ContentView()
                 .configureLocalization()
                 .onAppear {
-                    repeate()
+//                    repeate()
                 }
         }
     }

@@ -9,27 +9,14 @@ import SwiftUI
 import DocDesignSystem
 
 struct ContentView: View {
+    @State private var email: String = ""
+    @State private var password: String = ""
     var body: some View {
         VStack {
-            DesignSystem.Tokens.Icons.alert
-                .imageScale(.large)
-                .foregroundStyle(.tint)
+            EmailTextField(text: $email)
             
-            Text(L10n.hello)
-                .font(.headline, weight: .light)
-            
-            Button(role: .cancel) {
-                
-            } label: {
-                HStack {
-                    DesignSystem.Tokens.Icons.alert
-                    
-                    Text(L10n.hello)
-                }
-            }
-            .buttonStyle(.primary)
+            PasswordTextField(text: $password)
         }
-//        .background(.blue)
         .padding()
     }
 }

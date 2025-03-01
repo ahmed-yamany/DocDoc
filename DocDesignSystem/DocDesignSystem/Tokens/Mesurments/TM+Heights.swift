@@ -13,4 +13,8 @@ public extension DesignSystem.Tokens.Measurements {
         static let primaryTextField: CGFloat = 55.0
         static let socialMediaButton: CGFloat = 46.0
     }
+    
+    enum Padding {
+        static let textfieldContent: CGFloat = 20
+    }
 }

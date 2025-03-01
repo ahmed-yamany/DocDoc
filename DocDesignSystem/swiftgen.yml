@@ -57,6 +57,7 @@ files:
 strings:
    inputs:
      - Localization/StringFiles/Localizable/en.lproj
+     - Localization/StringFiles/Authentication/en.lproj
    outputs:
      - templateName: structured-swift5
        output: Localization/StringFiles/Strings+Generated.swift

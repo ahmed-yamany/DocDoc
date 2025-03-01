@@ -13,4 +13,6 @@ public extension DesignSystem.Tokens.Icons {
     }
     
     static let leftArrow: Image = Image(systemName: "chevron.left")
+    static let openEye: Image = Image(systemName: "eye.slash")
+    static let closeEye: Image = Image(systemName: "eye")
 }

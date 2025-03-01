@@ -10,11 +10,22 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 public enum L10n {
-  /// Localizable.strings
-  ///   DocDesignSystem
-  /// 
-  ///   Created by Ahmed Yamany on 22/02/2025.
-  public static var hello: String { return L10n.tr("Localizable", "hello", fallback: "Hello") }
+  public enum Authentication {
+    /// Authentication.strings
+    ///   DocDesignSystem
+    /// 
+    ///   Created by Ahmed Yamany on 01/03/2025.
+    public static var email: String { return L10n.tr("Authentication", "email", fallback: "Email") }
+    /// Password
+    public static var password: String { return L10n.tr("Authentication", "password", fallback: "Password") }
+  }
+  public enum Localizable {
+    /// Localizable.strings
+    ///   DocDesignSystem
+    /// 
+    ///   Created by Ahmed Yamany on 22/02/2025.
+    public static var hello: String { return L10n.tr("Localizable", "hello", fallback: "Hello") }
+  }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name vertical_whitespace_opening_braces

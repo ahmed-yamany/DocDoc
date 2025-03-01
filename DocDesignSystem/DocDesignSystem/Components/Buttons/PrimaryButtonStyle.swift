@@ -38,7 +38,7 @@ public extension ButtonStyle where Self == PrimaryButtonStyle {
     Button {
     } label: {
         HStack {
-            Text(L10n.hello)
+            Text(L10n.Localizable.hello)
             DesignSystem.Tokens.Icons.leftArrow
             DesignSystem.Tokens.Icons.alert.renderingMode(.template)
         }
