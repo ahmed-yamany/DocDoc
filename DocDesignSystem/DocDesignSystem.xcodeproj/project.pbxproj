@@ -19,11 +19,12 @@
 		735DAFCE2D6A0B1700A95EA5 /* FM+Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735DAFC72D6A0B1700A95EA5 /* FM+Font.swift */; };
 		735DAFCF2D6A0B1700A95EA5 /* FM+BorderRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735DAFC52D6A0B1700A95EA5 /* FM+BorderRadius.swift */; };
 		735DAFD02D6A0B1700A95EA5 /* FM+Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735DAFCA2D6A0B1700A95EA5 /* FM+Spacing.swift */; };
-		735DAFD22D6A44D300A95EA5 /* Font+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735DAFD12D6A44D300A95EA5 /* Font+.swift */; };
+		735DAFD22D6A44D300A95EA5 /* Text+Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735DAFD12D6A44D300A95EA5 /* Text+Font.swift */; };
 		735DAFD82D6A56EE00A95EA5 /* DesignSystem+Tokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735DAFD72D6A56EE00A95EA5 /* DesignSystem+Tokens.swift */; };
 		735DAFDA2D6A573500A95EA5 /* DesignSystem+Foundations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735DAFD92D6A573500A95EA5 /* DesignSystem+Foundations.swift */; };
 		735DAFDE2D6A5EA600A95EA5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 735DAFDC2D6A5EA600A95EA5 /* Localizable.strings */; };
 		735DB0552D6A5FCB00A95EA5 /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735DB0542D6A5FCB00A95EA5 /* Strings+Generated.swift */; };
+		73795DF52D732A620038DF24 /* PrimaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73795DF42D732A620038DF24 /* PrimaryButtonStyle.swift */; };
 		739D1CED2D63D7A9006E2DE3 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 739D1CEB2D63D7A9006E2DE3 /* Colors.xcassets */; };
 		739D1CEE2D63D7A9006E2DE3 /* Asset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 739D1CE92D63D7A9006E2DE3 /* Asset.xcassets */; };
 		739D1CF92D63D7BB006E2DE3 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 739D1CF02D63D7BB006E2DE3 /* Icons.xcassets */; };
@@ -53,12 +54,13 @@
 		735DAFC82D6A0B1700A95EA5 /* FontToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontToken.swift; sourceTree = "<group>"; };
 		735DAFC92D6A0B1700A95EA5 /* FM+Padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FM+Padding.swift"; sourceTree = "<group>"; };
 		735DAFCA2D6A0B1700A95EA5 /* FM+Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FM+Spacing.swift"; sourceTree = "<group>"; };
-		735DAFD12D6A44D300A95EA5 /* Font+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+.swift"; sourceTree = "<group>"; };
+		735DAFD12D6A44D300A95EA5 /* Text+Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+Font.swift"; sourceTree = "<group>"; };
 		735DAFD72D6A56EE00A95EA5 /* DesignSystem+Tokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DesignSystem+Tokens.swift"; sourceTree = "<group>"; };
 		735DAFD92D6A573500A95EA5 /* DesignSystem+Foundations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DesignSystem+Foundations.swift"; sourceTree = "<group>"; };
 		735DAFDD2D6A5EA600A95EA5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		735DAFDF2D6A5EB500A95EA5 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		735DB0542D6A5FCB00A95EA5 /* Strings+Generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
+		73795DF42D732A620038DF24 /* PrimaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonStyle.swift; sourceTree = "<group>"; };
 		739D1CE92D63D7A9006E2DE3 /* Asset.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Asset.xcassets; sourceTree = "<group>"; };
 		739D1CEB2D63D7A9006E2DE3 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		739D1CF02D63D7BB006E2DE3 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
@@ -125,6 +127,22 @@
 				735DAFDC2D6A5EA600A95EA5 /* Localizable.strings */,
 			);
 			path = Localizable;
+			sourceTree = "<group>";
+		};
+		73795D2F2D731D3F0038DF24 /* Text */ = {
+			isa = PBXGroup;
+			children = (
+				735DAFD12D6A44D300A95EA5 /* Text+Font.swift */,
+			);
+			path = Text;
+			sourceTree = "<group>";
+		};
+		73795DF32D732A4C0038DF24 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				73795DF42D732A620038DF24 /* PrimaryButtonStyle.swift */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 		739D1CEA2D63D7A9006E2DE3 /* Assets */ = {
@@ -258,7 +276,8 @@
 		73DA71262D579EE200BA8114 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				735DAFD12D6A44D300A95EA5 /* Font+.swift */,
+				73795DF32D732A4C0038DF24 /* Buttons */,
+				73795D2F2D731D3F0038DF24 /* Text */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -381,8 +400,9 @@
 				739D1D0D2D63D9F2006E2DE3 /* FontFamily.swift in Sources */,
 				739D1D192D63DA68006E2DE3 /* AssetsTokens.swift in Sources */,
 				739D1D1A2D63DA68006E2DE3 /* FontConvertible+.swift in Sources */,
+				73795DF52D732A620038DF24 /* PrimaryButtonStyle.swift in Sources */,
 				735DAFC42D6A032800A95EA5 /* swiftgen_localized.swift in Sources */,
-				735DAFD22D6A44D300A95EA5 /* Font+.swift in Sources */,
+				735DAFD22D6A44D300A95EA5 /* Text+Font.swift in Sources */,
 				739D1D1B2D63DA68006E2DE3 /* ColorTokens.swift in Sources */,
 				735DAFCB2D6A0B1700A95EA5 /* FM+Padding.swift in Sources */,
 				735DAFCC2D6A0B1700A95EA5 /* FM+BorderWidth.swift in Sources */,

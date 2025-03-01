@@ -8,6 +8,14 @@
 import SwiftUI
 
 extension DesignSystem.Tokens.Colors {
-    static var primaryButtonColor: Color { .blue60 }
+    static let primary: Color = .blue60
+    
+
+    // MARK: - primary button
+
+    static let primaryButtonBackground: Color = Self.primary
+    static let primaryButtonPressBackground: Color = .gray50
+    static let primaryButtonForgroundColor: Color = .gray20
+    
     static var primaryBackGroundColor: Color { .white }
 }

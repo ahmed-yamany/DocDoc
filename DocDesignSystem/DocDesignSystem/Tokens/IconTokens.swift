@@ -11,4 +11,6 @@ public extension DesignSystem.Tokens.Icons {
     static var alert: Image {
         Image(.alert)
     }
+    
+    static let leftArrow: Image = Image(systemName: "chevron.left")
 }

@@ -10,6 +10,7 @@ import DocDesignSystem
 
 @main
 struct DocDocApp: App {
+    
     var body: some Scene {
         WindowGroup {
             ContentView()

@@ -34,6 +34,8 @@ public final class LocalizationSettings: LocalizationSettingsInterface {
 
     /// A thread-safe lock to prevent race conditions when accessing the language property.
     private let lock = NSLock()
+    
+    private let queue = DispatchQueue(label: "LocalizationSettingsQueue")
 
     /// The currently selected language, stored as a published property to trigger UI updates.
     @Published public var language: Language
@@ -48,15 +50,21 @@ public final class LocalizationSettings: LocalizationSettingsInterface {
 
     /// Retrieves the current application language in a thread-safe manner.
     public func getLanguage() -> Language {
-        lock.lock()
-        defer { lock.unlock() }
-        return language
+        queue.sync { [unowned self] in
+            self.language
+        }
+//        lock.lock()
+//        defer { lock.unlock() }
+//        return language
     }
 
     /// Updates the application language in a thread-safe manner.
     public func setLanguage(_ language: Language) {
-        lock.lock()
-        defer { lock.unlock() }
-        self.language = language
+        queue.sync { [unowned self] in
+            self.language = language
+        }
+//        lock.lock()
+//        defer { lock.unlock() }
+//        self.language = language
     }
 }

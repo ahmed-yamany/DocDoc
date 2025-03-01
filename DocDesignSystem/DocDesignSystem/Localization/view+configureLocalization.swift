@@ -17,7 +17,9 @@ import SwiftUI
 /// - Ensures that right-to-left (RTL) layout updates take effect immediately.
 /// - Prevents UI inconsistencies when switching languages dynamically.
 private struct LanguageModifier: ViewModifier {
-    /// Observes the shared instance of `LocalizationSettings` to track language changes.
+    // ⚠️ Important: This ensures the view updates when the language changes.
+    // Without this, SwiftUI won’t detect changes in LocalizationSettings,
+    // and the UI won’t refresh when the language is updated.
     @ObservedObject var languageSettings = LocalizationSettings.shared
 
     func body(content: Content) -> some View {
@@ -25,6 +27,7 @@ private struct LanguageModifier: ViewModifier {
             .environment(\.locale, languageSettings.language.local)
             .environment(\.layoutDirection, languageSettings.language.layoutDirection)
             .animation(.easeInOut(duration: 0.3), value: languageSettings.language)
+            .id(languageSettings.language)
     }
 }
 

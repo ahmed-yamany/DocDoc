@@ -14,9 +14,22 @@ struct ContentView: View {
             DesignSystem.Tokens.Icons.alert
                 .imageScale(.large)
                 .foregroundStyle(.tint)
+            
             Text(L10n.hello)
+                .font(.headline, weight: .light)
+            
+            Button(role: .cancel) {
+                
+            } label: {
+                HStack {
+                    DesignSystem.Tokens.Icons.alert
+                    
+                    Text(L10n.hello)
+                }
+            }
+            .buttonStyle(.primary)
         }
-        .background(.blue)
+//        .background(.blue)
         .padding()
     }
 }
