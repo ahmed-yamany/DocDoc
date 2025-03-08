@@ -3,13 +3,21 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 70;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		7361CA5A2D63D66300968D6E /* DocDesignSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7361CA592D63D66300968D6E /* DocDesignSystem.framework */; };
 		7361CA5B2D63D66300968D6E /* DocDesignSystem.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7361CA592D63D66300968D6E /* DocDesignSystem.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7394EFA32D7C71B6005B7C2D /* Coordinator in Frameworks */ = {isa = PBXBuildFile; productRef = 7394EFA22D7C71B6005B7C2D /* Coordinator */; };
+		73C80FBC2D7CCFBC00E8B5CE /* AppFlowConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C80FB82D7CCFBC00E8B5CE /* AppFlowConfigurator.swift */; };
+		73C80FBD2D7CCFBC00E8B5CE /* AppFlows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C80FB92D7CCFBC00E8B5CE /* AppFlows.swift */; };
+		73C80FBE2D7CCFBC00E8B5CE /* AppFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C80FBA2D7CCFBC00E8B5CE /* AppFlowView.swift */; };
+		73C80FC82D7CCFC000E8B5CE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C80FBF2D7CCFC000E8B5CE /* LoginView.swift */; };
+		73C80FC92D7CCFC000E8B5CE /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C80FC12D7CCFC000E8B5CE /* OnboardingCoordinator.swift */; };
+		73C80FCA2D7CCFC000E8B5CE /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C80FC22D7CCFC000E8B5CE /* OnboardingView.swift */; };
+		73C80FCB2D7CCFC000E8B5CE /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C80FC32D7CCFC000E8B5CE /* OnboardingViewModel.swift */; };
+		73C80FCC2D7CCFC000E8B5CE /* OnboardingFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C80FC52D7CCFC000E8B5CE /* OnboardingFlow.swift */; };
 		73DA6FAF2D57931600BA8114 /* DocDocApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DA6FAC2D57931600BA8114 /* DocDocApp.swift */; };
 		73DA6FB12D57931600BA8114 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73DA6FAA2D57931600BA8114 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -32,15 +40,18 @@
 		7361CA592D63D66300968D6E /* DocDesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DocDesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7394EF2C2D7C623D005B7C2D /* Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73C688792D63D47C00F91C06 /* DocDesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DocDesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		73C80FB82D7CCFBC00E8B5CE /* AppFlowConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowConfigurator.swift; sourceTree = "<group>"; };
+		73C80FB92D7CCFBC00E8B5CE /* AppFlows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlows.swift; sourceTree = "<group>"; };
+		73C80FBA2D7CCFBC00E8B5CE /* AppFlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowView.swift; sourceTree = "<group>"; };
+		73C80FBF2D7CCFC000E8B5CE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		73C80FC12D7CCFC000E8B5CE /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
+		73C80FC22D7CCFC000E8B5CE /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		73C80FC32D7CCFC000E8B5CE /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		73C80FC52D7CCFC000E8B5CE /* OnboardingFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFlow.swift; sourceTree = "<group>"; };
 		73DA6F972D5792FA00BA8114 /* DocDoc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DocDoc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73DA6FAA2D57931600BA8114 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		73DA6FAC2D57931600BA8114 /* DocDocApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocDocApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		7394EFA42D7C7349005B7C2D /* Screens */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Screens; sourceTree = "<group>"; };
-		7394F01B2D7C7842005B7C2D /* App */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = App; sourceTree = "<group>"; };
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		73DA6F942D5792FA00BA8114 /* Frameworks */ = {
@@ -65,6 +76,52 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		73C80FBB2D7CCFBC00E8B5CE /* App */ = {
+			isa = PBXGroup;
+			children = (
+				73C80FB82D7CCFBC00E8B5CE /* AppFlowConfigurator.swift */,
+				73C80FB92D7CCFBC00E8B5CE /* AppFlows.swift */,
+				73C80FBA2D7CCFBC00E8B5CE /* AppFlowView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		73C80FC02D7CCFC000E8B5CE /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				73C80FBF2D7CCFC000E8B5CE /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		73C80FC42D7CCFC000E8B5CE /* Onbaording */ = {
+			isa = PBXGroup;
+			children = (
+				73C80FC12D7CCFC000E8B5CE /* OnboardingCoordinator.swift */,
+				73C80FC22D7CCFC000E8B5CE /* OnboardingView.swift */,
+				73C80FC32D7CCFC000E8B5CE /* OnboardingViewModel.swift */,
+			);
+			path = Onbaording;
+			sourceTree = "<group>";
+		};
+		73C80FC62D7CCFC000E8B5CE /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				73C80FC02D7CCFC000E8B5CE /* Login */,
+				73C80FC42D7CCFC000E8B5CE /* Onbaording */,
+				73C80FC52D7CCFC000E8B5CE /* OnboardingFlow.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		73C80FC72D7CCFC000E8B5CE /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				73C80FC62D7CCFC000E8B5CE /* Authentication */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
 		73DA6F8E2D5792FA00BA8114 = {
 			isa = PBXGroup;
 			children = (
@@ -85,8 +142,8 @@
 		73DA6FAD2D57931600BA8114 /* DocDoc */ = {
 			isa = PBXGroup;
 			children = (
-				7394F01B2D7C7842005B7C2D /* App */,
-				7394EFA42D7C7349005B7C2D /* Screens */,
+				73C80FBB2D7CCFBC00E8B5CE /* App */,
+				73C80FC72D7CCFC000E8B5CE /* Screens */,
 				73DA6FAA2D57931600BA8114 /* Assets.xcassets */,
 				73DA6FAC2D57931600BA8114 /* DocDocApp.swift */,
 			);
@@ -108,10 +165,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				7394EFA42D7C7349005B7C2D /* Screens */,
-				7394F01B2D7C7842005B7C2D /* App */,
 			);
 			name = DocDoc;
 			packageProductDependencies = (
@@ -170,6 +223,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73C80FC82D7CCFC000E8B5CE /* LoginView.swift in Sources */,
+				73C80FC92D7CCFC000E8B5CE /* OnboardingCoordinator.swift in Sources */,
+				73C80FCA2D7CCFC000E8B5CE /* OnboardingView.swift in Sources */,
+				73C80FCB2D7CCFC000E8B5CE /* OnboardingViewModel.swift in Sources */,
+				73C80FCC2D7CCFC000E8B5CE /* OnboardingFlow.swift in Sources */,
+				73C80FBC2D7CCFBC00E8B5CE /* AppFlowConfigurator.swift in Sources */,
+				73C80FBD2D7CCFBC00E8B5CE /* AppFlows.swift in Sources */,
+				73C80FBE2D7CCFBC00E8B5CE /* AppFlowView.swift in Sources */,
 				73DA6FAF2D57931600BA8114 /* DocDocApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
