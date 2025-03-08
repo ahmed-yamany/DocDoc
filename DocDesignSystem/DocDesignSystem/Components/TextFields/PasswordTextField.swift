@@ -19,21 +19,22 @@ public struct PasswordTextField: View {
         PrimaryTextField(
             text: $text,
             placeholder: L10n.Authentication.password,
-            isSecured: isSecured
-//            trailingImage: leadingImage(),
-//            trailingImageClickAction: {
-//                isSecured.toggle()
-//            }
+            isSecured: isSecured,
+            trailingView: { AnyView(leadingImage()) }
         )
     }
     
     
-    private func leadingImage() -> Image {
-        if isSecured {
-            DesignSystem.Tokens.Icons.openEye
-        } else {
-            DesignSystem.Tokens.Icons.closeEye
+    private func leadingImage() -> some View {
+        Group {
+            if isSecured {
+                DesignSystem.Tokens.Icons.openEye
+            } else {
+                DesignSystem.Tokens.Icons.closeEye
+            }
         }
-        
+        .onTapGesture {
+            isSecured.toggle()
+        }
     }
 }

@@ -46,8 +46,6 @@ public struct PrimaryTextField: View {
         }
     }
 
-   
-
     private var textField: some View {
         Group {
             if isSecured {
@@ -59,31 +57,10 @@ public struct PrimaryTextField: View {
         .font(.caption1, weight: .semiBold)
     }
 
-//    @ViewBuilder
-//    private var trailingImageView: some View {
-//        trailingImage?.textFieldIconStyle()
-//            .onTapGesture {
-//                if let trailingImageClickAction {
-//                    UIImpactFeedbackGenerator(style: .medium).impactOccurred()
-//                    trailingImageClickAction()
-//                }
-//            }
-//    }
-
     private var shape: some Shape {
         RoundedRectangle(cornerRadius: DesignSystem.Foundations.Measurements.BorderRadius.large)
     }
 }
-
-//private extension Image {
-//    func textFieldIconStyle() -> some View {
-//        resizable()
-//            .renderingMode(.template)
-//            .aspectRatio(contentMode: .fit)
-//            .frame(width: 24, height: 24)
-//            .foregroundStyle(DesignSystem.Tokens.Colors.tint)
-//    }
-//}
 
 @available(iOS 17.0, *)
 #Preview {
@@ -93,8 +70,8 @@ public struct PrimaryTextField: View {
         text: $text,
         placeholder: "Email",
         isSecured: false,
-        leadingView: { AnyView(DesignSystem.Tokens.Icons.alert)},
-        trailingView: {AnyView(DesignSystem.Tokens.Icons.alert)}
+        leadingView: { AnyView(DesignSystem.Tokens.Icons.alert) },
+        trailingView: { AnyView(DesignSystem.Tokens.Icons.alert) }
     )
     .padding()
 }

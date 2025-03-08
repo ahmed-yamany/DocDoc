@@ -29,7 +29,7 @@ public extension DesignSystem.Foundations.Measurements {
         public static let small: CGFloat = 6
 
         /// Medium border radius (8 pts).
-        public static let medium: CGFloat = 8
+        public static let medium: CGFloat = 10
 
         /// Extra medium border radius (12 pts).
         public static let xMedium: CGFloat = 12

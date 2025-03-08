@@ -8,12 +8,13 @@
 import SwiftUI
 
 public struct PrimaryButtonStyle: ButtonStyle {
+    @Environment(\.isEnabled) private var isEnabled
+    
     public func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .frame(maxWidth: .infinity)
             .frame(height: DesignSystem.Tokens.Measurements.Height.primaryButton)
             .background(backgroundColor(configuration))
-
             .clipShape(RoundedRectangle(cornerRadius: DesignSystem.Foundations.Measurements.BorderRadius.medium))
             .foregroundStyle(DesignSystem.Tokens.Colors.primaryButtonForgroundColor)
             .font(.caption1, weight: .semiBold)
