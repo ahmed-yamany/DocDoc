@@ -7,7 +7,6 @@
 
 import SwiftUI
 import DocDesignSystem
-import Test
 
 struct LoginView: View {
     @State private var email: String = ""

@@ -64,10 +64,10 @@ public struct PrimaryTextField: View {
 
 @available(iOS 17.0, *)
 #Preview {
-    @Previewable @State var text: String = ""
+//    @Previewable @State var text: String = ""
 
     PrimaryTextField(
-        text: $text,
+        text: .constant("ahmed"),
         placeholder: "Email",
         isSecured: false,
         leadingView: { AnyView(DesignSystem.Tokens.Icons.alert) },
