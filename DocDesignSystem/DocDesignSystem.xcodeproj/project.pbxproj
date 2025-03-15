@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E169EA82D7FC3170022654F /* PrimaryIconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E169EA72D7FC3170022654F /* PrimaryIconButton.swift */; };
+		0E169EAA2D7FC7B00022654F /* SocialMediaComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E169EA92D7FC7B00022654F /* SocialMediaComponent.swift */; };
+		0E169EAC2D7FE3810022654F /* Asset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E169EAB2D7FE3810022654F /* Asset.xcassets */; };
+		0ECE174D2D84C88700F623B3 /* BaseThreeHorizontalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECE174C2D84C88700F623B3 /* BaseThreeHorizontalView.swift */; };
 		7324FB1E2D6A6CDE0008B2A5 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7324FB1D2D6A6CDE0008B2A5 /* Language.swift */; };
 		7324FB202D6A6CFC0008B2A5 /* Language+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7324FB1F2D6A6CFC0008B2A5 /* Language+Layout.swift */; };
 		7324FB222D6A6D1B0008B2A5 /* Language+Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7324FB212D6A6D1B0008B2A5 /* Language+Bundle.swift */; };
@@ -31,7 +35,6 @@
 		73795F962D733D7C0038DF24 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73795F952D733D7C0038DF24 /* PasswordTextField.swift */; };
 		7379605B2D733FC20038DF24 /* PhoneTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7379605A2D733FC20038DF24 /* PhoneTextField.swift */; };
 		739D1CED2D63D7A9006E2DE3 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 739D1CEB2D63D7A9006E2DE3 /* Colors.xcassets */; };
-		739D1CEE2D63D7A9006E2DE3 /* Asset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 739D1CE92D63D7A9006E2DE3 /* Asset.xcassets */; };
 		739D1CF92D63D7BB006E2DE3 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 739D1CF02D63D7BB006E2DE3 /* Icons.xcassets */; };
 		739D1CFE2D63D7E5006E2DE3 /* Cairo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 739D1CFA2D63D7E5006E2DE3 /* Cairo.ttf */; };
 		739D1CFF2D63D7E5006E2DE3 /* Inter.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 739D1CFB2D63D7E5006E2DE3 /* Inter.ttf */; };
@@ -47,6 +50,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E169EA72D7FC3170022654F /* PrimaryIconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryIconButton.swift; sourceTree = "<group>"; };
+		0E169EA92D7FC7B00022654F /* SocialMediaComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialMediaComponent.swift; sourceTree = "<group>"; };
+		0E169EAB2D7FE3810022654F /* Asset.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Asset.xcassets; sourceTree = "<group>"; };
+		0ECE174C2D84C88700F623B3 /* BaseThreeHorizontalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseThreeHorizontalView.swift; sourceTree = "<group>"; };
 		7324FB1D2D6A6CDE0008B2A5 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		7324FB1F2D6A6CFC0008B2A5 /* Language+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Language+Layout.swift"; sourceTree = "<group>"; };
 		7324FB212D6A6D1B0008B2A5 /* Language+Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Language+Bundle.swift"; sourceTree = "<group>"; };
@@ -72,7 +79,6 @@
 		73795F942D733C6B0038DF24 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Authentication.strings; sourceTree = "<group>"; };
 		73795F952D733D7C0038DF24 /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
 		7379605A2D733FC20038DF24 /* PhoneTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneTextField.swift; sourceTree = "<group>"; };
-		739D1CE92D63D7A9006E2DE3 /* Asset.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Asset.xcassets; sourceTree = "<group>"; };
 		739D1CEB2D63D7A9006E2DE3 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		739D1CF02D63D7BB006E2DE3 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
 		739D1CFA2D63D7E5006E2DE3 /* Cairo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Cairo.ttf; sourceTree = "<group>"; };
@@ -101,6 +107,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E169EA62D7FC2E10022654F /* IconButton */ = {
+			isa = PBXGroup;
+			children = (
+				0E169EA72D7FC3170022654F /* PrimaryIconButton.swift */,
+			);
+			path = IconButton;
+			sourceTree = "<group>";
+		};
+		0ECE174A2D84C78700F623B3 /* SocailMedia */ = {
+			isa = PBXGroup;
+			children = (
+				0E169EA92D7FC7B00022654F /* SocialMediaComponent.swift */,
+			);
+			path = SocailMedia;
+			sourceTree = "<group>";
+		};
+		0ECE174B2D84C7D700F623B3 /* BaseThreehorizontallyView */ = {
+			isa = PBXGroup;
+			children = (
+				0ECE174C2D84C88700F623B3 /* BaseThreeHorizontalView.swift */,
+			);
+			path = BaseThreehorizontallyView;
+			sourceTree = "<group>";
+		};
 		7324FB1C2D6A6CCF0008B2A5 /* Language */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,7 +209,7 @@
 		739D1CEA2D63D7A9006E2DE3 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				739D1CE92D63D7A9006E2DE3 /* Asset.xcassets */,
+				0E169EAB2D7FE3810022654F /* Asset.xcassets */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -307,6 +337,9 @@
 		73DA71262D579EE200BA8114 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				0ECE174B2D84C7D700F623B3 /* BaseThreehorizontallyView */,
+				0ECE174A2D84C78700F623B3 /* SocailMedia */,
+				0E169EA62D7FC2E10022654F /* IconButton */,
 				73795F8B2D7336A70038DF24 /* TextFields */,
 				73795DF32D732A4C0038DF24 /* Buttons */,
 				73795D2F2D731D3F0038DF24 /* Text */,
@@ -389,10 +422,10 @@
 			files = (
 				739D1CED2D63D7A9006E2DE3 /* Colors.xcassets in Resources */,
 				739D1CF92D63D7BB006E2DE3 /* Icons.xcassets in Resources */,
+				0E169EAC2D7FE3810022654F /* Asset.xcassets in Resources */,
 				739D1CFE2D63D7E5006E2DE3 /* Cairo.ttf in Resources */,
 				735DAFDE2D6A5EA600A95EA5 /* Localizable.strings in Resources */,
 				739D1CFF2D63D7E5006E2DE3 /* Inter.ttf in Resources */,
-				739D1CEE2D63D7A9006E2DE3 /* Asset.xcassets in Resources */,
 				73795F932D733C670038DF24 /* Authentication.strings in Resources */,
 				739D1D102D63DA06006E2DE3 /* ios.pdf in Resources */,
 			);
@@ -437,10 +470,13 @@
 				73795DF52D732A620038DF24 /* PrimaryButtonStyle.swift in Sources */,
 				735DAFC42D6A032800A95EA5 /* swiftgen_localized.swift in Sources */,
 				73795F8D2D7336AC0038DF24 /* PrimaryTextField.swift in Sources */,
+				0E169EAA2D7FC7B00022654F /* SocialMediaComponent.swift in Sources */,
 				735DAFD22D6A44D300A95EA5 /* Text+Font.swift in Sources */,
 				739D1D1B2D63DA68006E2DE3 /* ColorTokens.swift in Sources */,
 				735DAFCB2D6A0B1700A95EA5 /* FM+Padding.swift in Sources */,
 				735DAFCC2D6A0B1700A95EA5 /* FM+BorderWidth.swift in Sources */,
+				0ECE174D2D84C88700F623B3 /* BaseThreeHorizontalView.swift in Sources */,
+				0E169EA82D7FC3170022654F /* PrimaryIconButton.swift in Sources */,
 				735DB0552D6A5FCB00A95EA5 /* Strings+Generated.swift in Sources */,
 				735DAFCD2D6A0B1700A95EA5 /* FontToken.swift in Sources */,
 				735DAFD82D6A56EE00A95EA5 /* DesignSystem+Tokens.swift in Sources */,
@@ -487,10 +523,11 @@
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 4U8DMJ33ZN;
+				DEVELOPMENT_TEAM = AWKSB6YK6X;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -524,10 +561,11 @@
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 4U8DMJ33ZN;
+				DEVELOPMENT_TEAM = AWKSB6YK6X;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";

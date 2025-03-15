@@ -13,7 +13,8 @@ import SwiftUI
 struct DocDocApp: App {
     var body: some Scene {
         WindowGroup {
-            AppFlowView()
+//            AppFlowView()
+            LoginView()
         }
     }
 }
