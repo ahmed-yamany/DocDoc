@@ -25,6 +25,8 @@ public enum L10n {
     /// 
     ///   Created by Ahmed Yamany on 22/02/2025.
     public static var hello: String { return L10n.tr("Localizable", "hello", fallback: "Hello") }
+    /// Your Number
+    public static var yourNumber: String { return L10n.tr("Localizable", "your-number", fallback: "Your Number") }
   }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length

@@ -10,21 +10,22 @@ import SwiftUI
 public struct PasswordTextField: View {
     @Binding var text: String
     @State private var isSecured: Bool = true
-    @Binding var hasError: Bool
-    
-    public init(text: Binding<String>,hasError: Binding<Bool>) {
+
+    public init(text: Binding<String>) {
         _text = text
-        _hasError = hasError
     }
-    
+
     public var body: some View {
-     PrimaryTextField(text: $text, hasError: $hasError,
-                      placeHolder: L10n.Authentication.password,
-                      isSecured: isSecured,
-                      trailing: {trailingImage()}
-     )
+        PrimaryTextField(
+            text: $text,
+            placeHolder: L10n.Authentication.password,
+            isSecured: isSecured,
+            trailing: { trailingImage()
+            }
+        )
+        .textContentType(.password)
     }
-    
+
     private func trailingImage() -> some View {
         Button(action: {
             isSecured.toggle()
@@ -37,7 +38,5 @@ public struct PasswordTextField: View {
                 }
             }
         }.buttonStyle(.plain)
-    
-       
     }
 }

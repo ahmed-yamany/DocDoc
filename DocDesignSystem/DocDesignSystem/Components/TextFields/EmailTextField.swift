@@ -8,24 +8,28 @@
 import SwiftUI
 
 public struct EmailTextField: View {
-    
+    @Environment(\.primaryTextFieldState) var primaryTextFieldState
     @Binding var text: String
-    @Binding var hasError: Bool
-  
-    public init(text: Binding<String>, hasError: Binding<Bool>) {
+
+    public init(text: Binding<String>) {
         _text = text
-        _hasError = hasError
-    }
-    
-    public var body: some View {
-        PrimaryTextField(text: $text, hasError: $hasError, 
-                         placeHolder: L10n.Authentication.email,
-                         keyboardType: .emailAddress)
     }
 
+    public var body: some View {
+        PrimaryTextField(
+            text: $text,
+            placeHolder: L10n.Authentication.email
+        )
+        .keyboardType(.emailAddress)
+        .textContentType(.emailAddress)
+        .environment(\.primaryTextFieldState, validate() ? .error("") : primaryTextFieldState)
+    }
+
+    func validate() -> Bool {
+        false
+    }
 }
 
-//#Preview {
+// #Preview {
 //    EmailTextField(text: .constant("mahmoud"), hasError: .constant(true))
-//}
-
+// }

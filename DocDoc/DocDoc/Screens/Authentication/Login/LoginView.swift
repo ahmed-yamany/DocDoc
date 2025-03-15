@@ -18,36 +18,62 @@ struct LoginView: View {
     @State private var passwordHasError: Bool = false
     @FocusState private var focusedField: Field?
     
-//    init(initialEmail: String = "", initialPassword: String = "", initialEmailHasError: Bool = false) {
-//        _email = State(initialValue: initialEmail)
-//        _password = State(initialValue: initialPassword)
-//        _emailHasError = State(initialValue: initialEmailHasError)
-//    }
+    @State var emailErrorMessage: String? = nil
+    
+    @State var state: PrimaryTextFieldState = .normal
+    
+    init(initialEmail: String = "", initialPassword: String = "", initialEmailHasError: Bool = false) {
+        _email = State(initialValue: initialEmail)
+        _password = State(initialValue: initialPassword)
+        _emailHasError = State(initialValue: initialEmailHasError)
+    }
 //    
     var body: some View {
         VStack {
-            EmailTextField(text: $email, hasError: $emailHasError)
+            EmailTextField(text: $email)
                 .focused($focusedField,equals: .email)
                 .submitLabel(.next)
                 .onSubmit {
                     focusedField = .password
                 }
                 .onChange(of: email) { newValue in
-                    emailHasError = newValue.contains("1")
+                    if newValue.isEmpty {
+                        emailErrorMessage = "Email is empty"
+                    } else if newValue.contains("#") {
+                        
+                    }
                 }
-            PasswordTextField(text: $password, hasError: $passwordHasError)
+                .setPrimaryTextFieldState(emailState())
+                
+            
+            PasswordTextField(text: $password)
                 .focused($focusedField,equals: .password)
                 .submitLabel(.done)
                 .onSubmit {
                     focusedField = nil
                 }
+                .setPrimaryTextFieldState(focusedField == .password ? .focused : .normal)
             
-            SocialMediaView(actionGoogle: {}, actionFaceBook: {}, actionApple: {})
+            SocialMediaView(items: [])
         }
         .padding()
+        .onAppear {
+            focusedField = .email
+        }
+        
+    }
+    
+    func emailState() -> PrimaryTextFieldState {
+        if let emailErrorMessage  {
+            return .error(emailErrorMessage)
+        } else if focusedField == .email{
+            return .focused
+        } else {
+            return .normal
+        }
     }
 }
 
-//#Preview {
-//    LoginView(initialEmail: "33")
-//}
+#Preview {
+    LoginView()
+}
