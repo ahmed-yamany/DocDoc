@@ -9,15 +9,29 @@
 /* Begin PBXBuildFile section */
 		7361CA5A2D63D66300968D6E /* DocDesignSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7361CA592D63D66300968D6E /* DocDesignSystem.framework */; };
 		7361CA5B2D63D66300968D6E /* DocDesignSystem.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7361CA592D63D66300968D6E /* DocDesignSystem.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		737EE60E2D88A2A30094E742 /* OnboardingFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737EE60D2D88A2A30094E742 /* OnboardingFactory.swift */; };
+		737EE6102D88A3F70094E742 /* SigninCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737EE60F2D88A3F70094E742 /* SigninCoordinator.swift */; };
+		737EE6122D88A4480094E742 /* SigninFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737EE6112D88A4480094E742 /* SigninFactory.swift */; };
+		737EE6152D88A6B60094E742 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737EE6142D88A6B50094E742 /* SignupView.swift */; };
+		737EE6172D88A6C10094E742 /* SignupCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737EE6162D88A6C10094E742 /* SignupCoordinator.swift */; };
+		737EE6192D88A6D80094E742 /* SignupFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737EE6182D88A6D80094E742 /* SignupFactory.swift */; };
+		737EE61B2D88A7DC0094E742 /* ForgoPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737EE61A2D88A7DC0094E742 /* ForgoPasswordView.swift */; };
+		737EE61D2D88A7EA0094E742 /* ForgotPasswordCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737EE61C2D88A7EA0094E742 /* ForgotPasswordCoordinator.swift */; };
+		737EE61F2D88A7F80094E742 /* ForgotPasswordFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737EE61E2D88A7F80094E742 /* ForgotPasswordFactory.swift */; };
+		737EE6242D88D2BE0094E742 /* CompleteProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737EE6232D88D2BE0094E742 /* CompleteProfile.swift */; };
+		737EE6262D88D2CE0094E742 /* CompleteProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737EE6252D88D2CE0094E742 /* CompleteProfileCoordinator.swift */; };
+		737EE6282D88D3240094E742 /* CompleteProfileFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737EE6272D88D3240094E742 /* CompleteProfileFactory.swift */; };
+		737EE62B2D88D5830094E742 /* OTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737EE62A2D88D5830094E742 /* OTPView.swift */; };
+		737EE62D2D88D58C0094E742 /* OTPCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737EE62C2D88D58C0094E742 /* OTPCoordinator.swift */; };
+		737EE62F2D88D5930094E742 /* OTPFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737EE62E2D88D5930094E742 /* OTPFactory.swift */; };
 		7394EFA32D7C71B6005B7C2D /* Coordinator in Frameworks */ = {isa = PBXBuildFile; productRef = 7394EFA22D7C71B6005B7C2D /* Coordinator */; };
 		73C80FBC2D7CCFBC00E8B5CE /* AppFlowConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C80FB82D7CCFBC00E8B5CE /* AppFlowConfigurator.swift */; };
 		73C80FBD2D7CCFBC00E8B5CE /* AppFlows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C80FB92D7CCFBC00E8B5CE /* AppFlows.swift */; };
 		73C80FBE2D7CCFBC00E8B5CE /* AppFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C80FBA2D7CCFBC00E8B5CE /* AppFlowView.swift */; };
-		73C80FC82D7CCFC000E8B5CE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C80FBF2D7CCFC000E8B5CE /* LoginView.swift */; };
+		73C80FC82D7CCFC000E8B5CE /* SigninView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C80FBF2D7CCFC000E8B5CE /* SigninView.swift */; };
 		73C80FC92D7CCFC000E8B5CE /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C80FC12D7CCFC000E8B5CE /* OnboardingCoordinator.swift */; };
 		73C80FCA2D7CCFC000E8B5CE /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C80FC22D7CCFC000E8B5CE /* OnboardingView.swift */; };
-		73C80FCB2D7CCFC000E8B5CE /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C80FC32D7CCFC000E8B5CE /* OnboardingViewModel.swift */; };
-		73C80FCC2D7CCFC000E8B5CE /* OnboardingFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C80FC52D7CCFC000E8B5CE /* OnboardingFlow.swift */; };
+		73C80FCC2D7CCFC000E8B5CE /* AuthenticatinFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C80FC52D7CCFC000E8B5CE /* AuthenticatinFlow.swift */; };
 		73DA6FAF2D57931600BA8114 /* DocDocApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DA6FAC2D57931600BA8114 /* DocDocApp.swift */; };
 		73DA6FB12D57931600BA8114 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73DA6FAA2D57931600BA8114 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -38,16 +52,30 @@
 
 /* Begin PBXFileReference section */
 		7361CA592D63D66300968D6E /* DocDesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DocDesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		737EE60D2D88A2A30094E742 /* OnboardingFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFactory.swift; sourceTree = "<group>"; };
+		737EE60F2D88A3F70094E742 /* SigninCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninCoordinator.swift; sourceTree = "<group>"; };
+		737EE6112D88A4480094E742 /* SigninFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninFactory.swift; sourceTree = "<group>"; };
+		737EE6142D88A6B50094E742 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
+		737EE6162D88A6C10094E742 /* SignupCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupCoordinator.swift; sourceTree = "<group>"; };
+		737EE6182D88A6D80094E742 /* SignupFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupFactory.swift; sourceTree = "<group>"; };
+		737EE61A2D88A7DC0094E742 /* ForgoPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgoPasswordView.swift; sourceTree = "<group>"; };
+		737EE61C2D88A7EA0094E742 /* ForgotPasswordCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordCoordinator.swift; sourceTree = "<group>"; };
+		737EE61E2D88A7F80094E742 /* ForgotPasswordFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordFactory.swift; sourceTree = "<group>"; };
+		737EE6232D88D2BE0094E742 /* CompleteProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteProfile.swift; sourceTree = "<group>"; };
+		737EE6252D88D2CE0094E742 /* CompleteProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteProfileCoordinator.swift; sourceTree = "<group>"; };
+		737EE6272D88D3240094E742 /* CompleteProfileFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteProfileFactory.swift; sourceTree = "<group>"; };
+		737EE62A2D88D5830094E742 /* OTPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPView.swift; sourceTree = "<group>"; };
+		737EE62C2D88D58C0094E742 /* OTPCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPCoordinator.swift; sourceTree = "<group>"; };
+		737EE62E2D88D5930094E742 /* OTPFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPFactory.swift; sourceTree = "<group>"; };
 		7394EF2C2D7C623D005B7C2D /* Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73C688792D63D47C00F91C06 /* DocDesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DocDesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73C80FB82D7CCFBC00E8B5CE /* AppFlowConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowConfigurator.swift; sourceTree = "<group>"; };
 		73C80FB92D7CCFBC00E8B5CE /* AppFlows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlows.swift; sourceTree = "<group>"; };
 		73C80FBA2D7CCFBC00E8B5CE /* AppFlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowView.swift; sourceTree = "<group>"; };
-		73C80FBF2D7CCFC000E8B5CE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		73C80FBF2D7CCFC000E8B5CE /* SigninView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninView.swift; sourceTree = "<group>"; };
 		73C80FC12D7CCFC000E8B5CE /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
 		73C80FC22D7CCFC000E8B5CE /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
-		73C80FC32D7CCFC000E8B5CE /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
-		73C80FC52D7CCFC000E8B5CE /* OnboardingFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFlow.swift; sourceTree = "<group>"; };
+		73C80FC52D7CCFC000E8B5CE /* AuthenticatinFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatinFlow.swift; sourceTree = "<group>"; };
 		73DA6F972D5792FA00BA8114 /* DocDoc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DocDoc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73DA6FAA2D57931600BA8114 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		73DA6FAC2D57931600BA8114 /* DocDocApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocDocApp.swift; sourceTree = "<group>"; };
@@ -66,6 +94,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		737EE6132D88A5F60094E742 /* Sign up */ = {
+			isa = PBXGroup;
+			children = (
+				737EE6142D88A6B50094E742 /* SignupView.swift */,
+				737EE6162D88A6C10094E742 /* SignupCoordinator.swift */,
+				737EE6182D88A6D80094E742 /* SignupFactory.swift */,
+			);
+			path = "Sign up";
+			sourceTree = "<group>";
+		};
+		737EE6202D88A7FB0094E742 /* ForgotPassword */ = {
+			isa = PBXGroup;
+			children = (
+				737EE61C2D88A7EA0094E742 /* ForgotPasswordCoordinator.swift */,
+				737EE61E2D88A7F80094E742 /* ForgotPasswordFactory.swift */,
+				737EE61A2D88A7DC0094E742 /* ForgoPasswordView.swift */,
+			);
+			path = ForgotPassword;
+			sourceTree = "<group>";
+		};
+		737EE6222D88D2AC0094E742 /* Complete Profile */ = {
+			isa = PBXGroup;
+			children = (
+				737EE6232D88D2BE0094E742 /* CompleteProfile.swift */,
+				737EE6252D88D2CE0094E742 /* CompleteProfileCoordinator.swift */,
+				737EE6272D88D3240094E742 /* CompleteProfileFactory.swift */,
+			);
+			path = "Complete Profile";
+			sourceTree = "<group>";
+		};
+		737EE6292D88D5710094E742 /* OTP */ = {
+			isa = PBXGroup;
+			children = (
+				737EE62A2D88D5830094E742 /* OTPView.swift */,
+				737EE62C2D88D58C0094E742 /* OTPCoordinator.swift */,
+				737EE62E2D88D5930094E742 /* OTPFactory.swift */,
+			);
+			path = OTP;
+			sourceTree = "<group>";
+		};
 		73C688782D63D47B00F91C06 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -89,7 +157,9 @@
 		73C80FC02D7CCFC000E8B5CE /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				73C80FBF2D7CCFC000E8B5CE /* LoginView.swift */,
+				73C80FBF2D7CCFC000E8B5CE /* SigninView.swift */,
+				737EE60F2D88A3F70094E742 /* SigninCoordinator.swift */,
+				737EE6112D88A4480094E742 /* SigninFactory.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -97,9 +167,9 @@
 		73C80FC42D7CCFC000E8B5CE /* Onbaording */ = {
 			isa = PBXGroup;
 			children = (
-				73C80FC12D7CCFC000E8B5CE /* OnboardingCoordinator.swift */,
 				73C80FC22D7CCFC000E8B5CE /* OnboardingView.swift */,
-				73C80FC32D7CCFC000E8B5CE /* OnboardingViewModel.swift */,
+				73C80FC12D7CCFC000E8B5CE /* OnboardingCoordinator.swift */,
+				737EE60D2D88A2A30094E742 /* OnboardingFactory.swift */,
 			);
 			path = Onbaording;
 			sourceTree = "<group>";
@@ -107,9 +177,13 @@
 		73C80FC62D7CCFC000E8B5CE /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				73C80FC02D7CCFC000E8B5CE /* Login */,
+				73C80FC52D7CCFC000E8B5CE /* AuthenticatinFlow.swift */,
 				73C80FC42D7CCFC000E8B5CE /* Onbaording */,
-				73C80FC52D7CCFC000E8B5CE /* OnboardingFlow.swift */,
+				73C80FC02D7CCFC000E8B5CE /* Login */,
+				737EE6132D88A5F60094E742 /* Sign up */,
+				737EE6202D88A7FB0094E742 /* ForgotPassword */,
+				737EE6222D88D2AC0094E742 /* Complete Profile */,
+				737EE6292D88D5710094E742 /* OTP */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -223,15 +297,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73C80FC82D7CCFC000E8B5CE /* LoginView.swift in Sources */,
+				737EE61B2D88A7DC0094E742 /* ForgoPasswordView.swift in Sources */,
+				737EE6152D88A6B60094E742 /* SignupView.swift in Sources */,
+				737EE61D2D88A7EA0094E742 /* ForgotPasswordCoordinator.swift in Sources */,
+				737EE61F2D88A7F80094E742 /* ForgotPasswordFactory.swift in Sources */,
+				737EE62D2D88D58C0094E742 /* OTPCoordinator.swift in Sources */,
+				737EE6102D88A3F70094E742 /* SigninCoordinator.swift in Sources */,
+				73C80FC82D7CCFC000E8B5CE /* SigninView.swift in Sources */,
 				73C80FC92D7CCFC000E8B5CE /* OnboardingCoordinator.swift in Sources */,
+				737EE6122D88A4480094E742 /* SigninFactory.swift in Sources */,
+				737EE6172D88A6C10094E742 /* SignupCoordinator.swift in Sources */,
 				73C80FCA2D7CCFC000E8B5CE /* OnboardingView.swift in Sources */,
-				73C80FCB2D7CCFC000E8B5CE /* OnboardingViewModel.swift in Sources */,
-				73C80FCC2D7CCFC000E8B5CE /* OnboardingFlow.swift in Sources */,
+				737EE62F2D88D5930094E742 /* OTPFactory.swift in Sources */,
+				737EE6242D88D2BE0094E742 /* CompleteProfile.swift in Sources */,
+				73C80FCC2D7CCFC000E8B5CE /* AuthenticatinFlow.swift in Sources */,
 				73C80FBC2D7CCFBC00E8B5CE /* AppFlowConfigurator.swift in Sources */,
+				737EE6282D88D3240094E742 /* CompleteProfileFactory.swift in Sources */,
+				737EE62B2D88D5830094E742 /* OTPView.swift in Sources */,
 				73C80FBD2D7CCFBC00E8B5CE /* AppFlows.swift in Sources */,
+				737EE6192D88A6D80094E742 /* SignupFactory.swift in Sources */,
 				73C80FBE2D7CCFBC00E8B5CE /* AppFlowView.swift in Sources */,
 				73DA6FAF2D57931600BA8114 /* DocDocApp.swift in Sources */,
+				737EE6262D88D2CE0094E742 /* CompleteProfileCoordinator.swift in Sources */,
+				737EE60E2D88A2A30094E742 /* OnboardingFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

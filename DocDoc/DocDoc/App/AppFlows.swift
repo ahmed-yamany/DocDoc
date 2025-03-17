@@ -8,6 +8,6 @@ import Foundation
 
 enum AppFlows {
     case splash
-    case onboarding
+    case notAuthenticated
     case authenticated
 }

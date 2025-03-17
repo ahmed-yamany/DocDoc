@@ -9,24 +9,25 @@ import DocDesignSystem
 import SwiftUI
 
 struct AppFlowView: View {
-    @StateObject var app = AppConfigurator()
+    @StateObject var appManager = AppManager()
 
     var body: some View {
         Group {
-            switch app.flow {
+            switch appManager.flow {
             case .splash:
                 Text("Splash")
                     .task {
                         try? await Task.sleep(for: .seconds(2))
-                        app.checkAuthentication()
+                        appManager.checkAuthentication()
                     }
-            case .onboarding:
-                OnboardingFlow()
+            case .notAuthenticated:
+                AuthenticatinFlow()
             case .authenticated:
                 Text("Auth")
             }
         }
         .configureLocalization()
+        .environmentObject(appManager)
     }
 
     func repeate() {

@@ -6,18 +6,16 @@
 //
 import SwiftUI
 
-protocol AppFlowConfigurator: ObservableObject {
-    var flow: AppFlows { get set }
-    
-    func checkAuthentication()
-}
-
-class AppConfigurator: AppFlowConfigurator {
+final class AppManager: ObservableObject {
     @Published var flow: AppFlows = .splash
     
     
     func checkAuthentication() {
-        flow = .onboarding
+        if flow == .notAuthenticated {
+            flow = .authenticated
+        } else {
+            flow = .notAuthenticated
+        }
     }
     
 }

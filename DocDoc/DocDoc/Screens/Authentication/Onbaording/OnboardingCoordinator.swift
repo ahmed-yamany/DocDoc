@@ -8,26 +8,8 @@
 import SwiftUI
 import Coordinator
 
-protocol OnboardingCoordinatorInterface {
-    func navigateToLogin()
+protocol OnboardingCoordinator {
+    func navigateToSignIn()
 }
 
-struct OnboardingCoordinator: OnboardingCoordinatorInterface, Coordinator {
-    
-    var router: Router
-    
-    
-    init(router: Router) {
-        self.router = router
-    }
-    
-    func start() {
-        router.setView(AnyHashableView(OnboardingView()), animated: true, completion: nil)
-    }
-    
-    func navigateToLogin() {
-        
-    }
-}
-
-
+extension AuthenticatinFlow: OnboardingCoordinator {}

@@ -8,12 +8,18 @@
 import SwiftUI
 
 struct OnboardingView: View {
+    let coordinator: OnboardingCoordinator
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text("onboarding screen")
+            Button("navigate to login") {
+                coordinator.navigateToSignIn()
+            }
+        }
     }
 }
 
 #Preview {
-    OnboardingView()
+    OnboardingFactory.preview()
 }
