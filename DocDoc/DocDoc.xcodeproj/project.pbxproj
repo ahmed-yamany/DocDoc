@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		735CFA352D89013B0078239C /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735CFA342D89013A0078239C /* TabBarView.swift */; };
 		7361CA5A2D63D66300968D6E /* DocDesignSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7361CA592D63D66300968D6E /* DocDesignSystem.framework */; };
 		7361CA5B2D63D66300968D6E /* DocDesignSystem.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7361CA592D63D66300968D6E /* DocDesignSystem.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		737EE60E2D88A2A30094E742 /* OnboardingFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737EE60D2D88A2A30094E742 /* OnboardingFactory.swift */; };
@@ -24,8 +25,30 @@
 		737EE62B2D88D5830094E742 /* OTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737EE62A2D88D5830094E742 /* OTPView.swift */; };
 		737EE62D2D88D58C0094E742 /* OTPCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737EE62C2D88D58C0094E742 /* OTPCoordinator.swift */; };
 		737EE62F2D88D5930094E742 /* OTPFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737EE62E2D88D5930094E742 /* OTPFactory.swift */; };
+		737EE6322D88D8F10094E742 /* TabBarFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737EE6312D88D8F10094E742 /* TabBarFlow.swift */; };
+		737EE6352D88D93A0094E742 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737EE6342D88D93A0094E742 /* SplashView.swift */; };
+		737EE6382D88DA120094E742 /* HomeFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737EE6372D88DA120094E742 /* HomeFlow.swift */; };
+		737EE63B2D88DA450094E742 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737EE63A2D88DA450094E742 /* HomeView.swift */; };
+		737EE63D2D88DA4B0094E742 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737EE63C2D88DA4B0094E742 /* HomeCoordinator.swift */; };
+		737EE63F2D88DA500094E742 /* HomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737EE63E2D88DA500094E742 /* HomeFactory.swift */; };
+		737EE6422D88DB1F0094E742 /* InboxFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737EE6412D88DB1F0094E742 /* InboxFlow.swift */; };
+		737EE6452D88DB3A0094E742 /* SearchFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737EE6442D88DB3A0094E742 /* SearchFlow.swift */; };
+		737EE6482D88DB570094E742 /* AppointmentFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737EE6472D88DB570094E742 /* AppointmentFlow.swift */; };
+		737EE64B2D88DB7F0094E742 /* ProfileFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737EE64A2D88DB7F0094E742 /* ProfileFlow.swift */; };
+		737EE64D2D88DDA30094E742 /* TabBarFlowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737EE64C2D88DDA30094E742 /* TabBarFlowManager.swift */; };
+		737EE64F2D88DDCF0094E742 /* TabBarItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737EE64E2D88DDCF0094E742 /* TabBarItemType.swift */; };
+		737EE6522D88E5910094E742 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737EE6512D88E5910094E742 /* NotificationView.swift */; };
+		737EE6542D88E5990094E742 /* NotificationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737EE6532D88E5990094E742 /* NotificationCoordinator.swift */; };
+		737EE6562D88E5A10094E742 /* NotificationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737EE6552D88E5A10094E742 /* NotificationFactory.swift */; };
+		737EE65B2D88E6F50094E742 /* FindNearbyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737EE6582D88E6F50094E742 /* FindNearbyView.swift */; };
+		737EE65C2D88E6F50094E742 /* FindNearbyCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737EE6592D88E6F50094E742 /* FindNearbyCoordinator.swift */; };
+		737EE65D2D88E6F50094E742 /* FindNearbyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737EE65A2D88E6F50094E742 /* FindNearbyFactory.swift */; };
+		737EE6622D88E7DF0094E742 /* DoctorSpecialityFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737EE6612D88E7DF0094E742 /* DoctorSpecialityFactory.swift */; };
+		737EE6632D88E7DF0094E742 /* DoctorSpecialityCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737EE6602D88E7DF0094E742 /* DoctorSpecialityCoordinator.swift */; };
+		737EE6642D88E7DF0094E742 /* DoctorSpecialityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737EE65F2D88E7DF0094E742 /* DoctorSpecialityView.swift */; };
+		737EE6662D88F10D0094E742 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737EE6652D88F10D0094E742 /* TabBarItem.swift */; };
 		7394EFA32D7C71B6005B7C2D /* Coordinator in Frameworks */ = {isa = PBXBuildFile; productRef = 7394EFA22D7C71B6005B7C2D /* Coordinator */; };
-		73C80FBC2D7CCFBC00E8B5CE /* AppFlowConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C80FB82D7CCFBC00E8B5CE /* AppFlowConfigurator.swift */; };
+		73C80FBC2D7CCFBC00E8B5CE /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C80FB82D7CCFBC00E8B5CE /* AppManager.swift */; };
 		73C80FBD2D7CCFBC00E8B5CE /* AppFlows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C80FB92D7CCFBC00E8B5CE /* AppFlows.swift */; };
 		73C80FBE2D7CCFBC00E8B5CE /* AppFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C80FBA2D7CCFBC00E8B5CE /* AppFlowView.swift */; };
 		73C80FC82D7CCFC000E8B5CE /* SigninView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C80FBF2D7CCFC000E8B5CE /* SigninView.swift */; };
@@ -51,6 +74,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		735CFA342D89013A0078239C /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		7361CA592D63D66300968D6E /* DocDesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DocDesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		737EE60D2D88A2A30094E742 /* OnboardingFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFactory.swift; sourceTree = "<group>"; };
 		737EE60F2D88A3F70094E742 /* SigninCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninCoordinator.swift; sourceTree = "<group>"; };
@@ -67,9 +91,31 @@
 		737EE62A2D88D5830094E742 /* OTPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPView.swift; sourceTree = "<group>"; };
 		737EE62C2D88D58C0094E742 /* OTPCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPCoordinator.swift; sourceTree = "<group>"; };
 		737EE62E2D88D5930094E742 /* OTPFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPFactory.swift; sourceTree = "<group>"; };
+		737EE6312D88D8F10094E742 /* TabBarFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarFlow.swift; sourceTree = "<group>"; };
+		737EE6342D88D93A0094E742 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		737EE6372D88DA120094E742 /* HomeFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFlow.swift; sourceTree = "<group>"; };
+		737EE63A2D88DA450094E742 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		737EE63C2D88DA4B0094E742 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		737EE63E2D88DA500094E742 /* HomeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFactory.swift; sourceTree = "<group>"; };
+		737EE6412D88DB1F0094E742 /* InboxFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxFlow.swift; sourceTree = "<group>"; };
+		737EE6442D88DB3A0094E742 /* SearchFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFlow.swift; sourceTree = "<group>"; };
+		737EE6472D88DB570094E742 /* AppointmentFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentFlow.swift; sourceTree = "<group>"; };
+		737EE64A2D88DB7F0094E742 /* ProfileFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFlow.swift; sourceTree = "<group>"; };
+		737EE64C2D88DDA30094E742 /* TabBarFlowManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarFlowManager.swift; sourceTree = "<group>"; };
+		737EE64E2D88DDCF0094E742 /* TabBarItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItemType.swift; sourceTree = "<group>"; };
+		737EE6512D88E5910094E742 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		737EE6532D88E5990094E742 /* NotificationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCoordinator.swift; sourceTree = "<group>"; };
+		737EE6552D88E5A10094E742 /* NotificationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationFactory.swift; sourceTree = "<group>"; };
+		737EE6582D88E6F50094E742 /* FindNearbyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindNearbyView.swift; sourceTree = "<group>"; };
+		737EE6592D88E6F50094E742 /* FindNearbyCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindNearbyCoordinator.swift; sourceTree = "<group>"; };
+		737EE65A2D88E6F50094E742 /* FindNearbyFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindNearbyFactory.swift; sourceTree = "<group>"; };
+		737EE65F2D88E7DF0094E742 /* DoctorSpecialityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorSpecialityView.swift; sourceTree = "<group>"; };
+		737EE6602D88E7DF0094E742 /* DoctorSpecialityCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorSpecialityCoordinator.swift; sourceTree = "<group>"; };
+		737EE6612D88E7DF0094E742 /* DoctorSpecialityFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorSpecialityFactory.swift; sourceTree = "<group>"; };
+		737EE6652D88F10D0094E742 /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
 		7394EF2C2D7C623D005B7C2D /* Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73C688792D63D47C00F91C06 /* DocDesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DocDesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		73C80FB82D7CCFBC00E8B5CE /* AppFlowConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowConfigurator.swift; sourceTree = "<group>"; };
+		73C80FB82D7CCFBC00E8B5CE /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 		73C80FB92D7CCFBC00E8B5CE /* AppFlows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlows.swift; sourceTree = "<group>"; };
 		73C80FBA2D7CCFBC00E8B5CE /* AppFlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowView.swift; sourceTree = "<group>"; };
 		73C80FBF2D7CCFC000E8B5CE /* SigninView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninView.swift; sourceTree = "<group>"; };
@@ -134,6 +180,115 @@
 			path = OTP;
 			sourceTree = "<group>";
 		};
+		737EE6302D88D8B40094E742 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				737EE6652D88F10D0094E742 /* TabBarItem.swift */,
+				737EE6312D88D8F10094E742 /* TabBarFlow.swift */,
+				735CFA342D89013A0078239C /* TabBarView.swift */,
+				737EE64E2D88DDCF0094E742 /* TabBarItemType.swift */,
+				737EE64C2D88DDA30094E742 /* TabBarFlowManager.swift */,
+				737EE6362D88DA030094E742 /* HomeFlow */,
+				737EE6462D88DB4A0094E742 /* AppointmentFlow */,
+				737EE6492D88DB730094E742 /* ProfileFlow */,
+				737EE6432D88DB2C0094E742 /* Search Flow */,
+				737EE6402D88DB140094E742 /* InboxFlow */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		737EE6332D88D9160094E742 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				737EE6342D88D93A0094E742 /* SplashView.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		737EE6362D88DA030094E742 /* HomeFlow */ = {
+			isa = PBXGroup;
+			children = (
+				737EE6372D88DA120094E742 /* HomeFlow.swift */,
+				737EE6392D88DA380094E742 /* Home */,
+				737EE6502D88E57E0094E742 /* Notification */,
+				737EE6572D88E6DC0094E742 /* FindNearby */,
+				737EE65E2D88E7CF0094E742 /* DoctorSpeciality */,
+			);
+			path = HomeFlow;
+			sourceTree = "<group>";
+		};
+		737EE6392D88DA380094E742 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				737EE63A2D88DA450094E742 /* HomeView.swift */,
+				737EE63C2D88DA4B0094E742 /* HomeCoordinator.swift */,
+				737EE63E2D88DA500094E742 /* HomeFactory.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		737EE6402D88DB140094E742 /* InboxFlow */ = {
+			isa = PBXGroup;
+			children = (
+				737EE6412D88DB1F0094E742 /* InboxFlow.swift */,
+			);
+			path = InboxFlow;
+			sourceTree = "<group>";
+		};
+		737EE6432D88DB2C0094E742 /* Search Flow */ = {
+			isa = PBXGroup;
+			children = (
+				737EE6442D88DB3A0094E742 /* SearchFlow.swift */,
+			);
+			path = "Search Flow";
+			sourceTree = "<group>";
+		};
+		737EE6462D88DB4A0094E742 /* AppointmentFlow */ = {
+			isa = PBXGroup;
+			children = (
+				737EE6472D88DB570094E742 /* AppointmentFlow.swift */,
+			);
+			path = AppointmentFlow;
+			sourceTree = "<group>";
+		};
+		737EE6492D88DB730094E742 /* ProfileFlow */ = {
+			isa = PBXGroup;
+			children = (
+				737EE64A2D88DB7F0094E742 /* ProfileFlow.swift */,
+			);
+			path = ProfileFlow;
+			sourceTree = "<group>";
+		};
+		737EE6502D88E57E0094E742 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				737EE6512D88E5910094E742 /* NotificationView.swift */,
+				737EE6532D88E5990094E742 /* NotificationCoordinator.swift */,
+				737EE6552D88E5A10094E742 /* NotificationFactory.swift */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		737EE6572D88E6DC0094E742 /* FindNearby */ = {
+			isa = PBXGroup;
+			children = (
+				737EE6582D88E6F50094E742 /* FindNearbyView.swift */,
+				737EE6592D88E6F50094E742 /* FindNearbyCoordinator.swift */,
+				737EE65A2D88E6F50094E742 /* FindNearbyFactory.swift */,
+			);
+			path = FindNearby;
+			sourceTree = "<group>";
+		};
+		737EE65E2D88E7CF0094E742 /* DoctorSpeciality */ = {
+			isa = PBXGroup;
+			children = (
+				737EE65F2D88E7DF0094E742 /* DoctorSpecialityView.swift */,
+				737EE6602D88E7DF0094E742 /* DoctorSpecialityCoordinator.swift */,
+				737EE6612D88E7DF0094E742 /* DoctorSpecialityFactory.swift */,
+			);
+			path = DoctorSpeciality;
+			sourceTree = "<group>";
+		};
 		73C688782D63D47B00F91C06 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,7 +302,7 @@
 		73C80FBB2D7CCFBC00E8B5CE /* App */ = {
 			isa = PBXGroup;
 			children = (
-				73C80FB82D7CCFBC00E8B5CE /* AppFlowConfigurator.swift */,
+				73C80FB82D7CCFBC00E8B5CE /* AppManager.swift */,
 				73C80FB92D7CCFBC00E8B5CE /* AppFlows.swift */,
 				73C80FBA2D7CCFBC00E8B5CE /* AppFlowView.swift */,
 			);
@@ -191,7 +346,9 @@
 		73C80FC72D7CCFC000E8B5CE /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				737EE6332D88D9160094E742 /* Splash */,
 				73C80FC62D7CCFC000E8B5CE /* Authentication */,
+				737EE6302D88D8B40094E742 /* TabBar */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -297,29 +454,52 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				737EE63B2D88DA450094E742 /* HomeView.swift in Sources */,
 				737EE61B2D88A7DC0094E742 /* ForgoPasswordView.swift in Sources */,
 				737EE6152D88A6B60094E742 /* SignupView.swift in Sources */,
+				737EE6352D88D93A0094E742 /* SplashView.swift in Sources */,
 				737EE61D2D88A7EA0094E742 /* ForgotPasswordCoordinator.swift in Sources */,
+				737EE63D2D88DA4B0094E742 /* HomeCoordinator.swift in Sources */,
 				737EE61F2D88A7F80094E742 /* ForgotPasswordFactory.swift in Sources */,
 				737EE62D2D88D58C0094E742 /* OTPCoordinator.swift in Sources */,
 				737EE6102D88A3F70094E742 /* SigninCoordinator.swift in Sources */,
 				73C80FC82D7CCFC000E8B5CE /* SigninView.swift in Sources */,
 				73C80FC92D7CCFC000E8B5CE /* OnboardingCoordinator.swift in Sources */,
 				737EE6122D88A4480094E742 /* SigninFactory.swift in Sources */,
+				737EE6662D88F10D0094E742 /* TabBarItem.swift in Sources */,
+				737EE6382D88DA120094E742 /* HomeFlow.swift in Sources */,
+				737EE64B2D88DB7F0094E742 /* ProfileFlow.swift in Sources */,
 				737EE6172D88A6C10094E742 /* SignupCoordinator.swift in Sources */,
 				73C80FCA2D7CCFC000E8B5CE /* OnboardingView.swift in Sources */,
 				737EE62F2D88D5930094E742 /* OTPFactory.swift in Sources */,
+				737EE63F2D88DA500094E742 /* HomeFactory.swift in Sources */,
 				737EE6242D88D2BE0094E742 /* CompleteProfile.swift in Sources */,
 				73C80FCC2D7CCFC000E8B5CE /* AuthenticatinFlow.swift in Sources */,
-				73C80FBC2D7CCFBC00E8B5CE /* AppFlowConfigurator.swift in Sources */,
+				73C80FBC2D7CCFBC00E8B5CE /* AppManager.swift in Sources */,
+				737EE6562D88E5A10094E742 /* NotificationFactory.swift in Sources */,
+				737EE6322D88D8F10094E742 /* TabBarFlow.swift in Sources */,
+				737EE65B2D88E6F50094E742 /* FindNearbyView.swift in Sources */,
+				737EE65C2D88E6F50094E742 /* FindNearbyCoordinator.swift in Sources */,
+				737EE65D2D88E6F50094E742 /* FindNearbyFactory.swift in Sources */,
 				737EE6282D88D3240094E742 /* CompleteProfileFactory.swift in Sources */,
+				737EE64D2D88DDA30094E742 /* TabBarFlowManager.swift in Sources */,
+				737EE6542D88E5990094E742 /* NotificationCoordinator.swift in Sources */,
 				737EE62B2D88D5830094E742 /* OTPView.swift in Sources */,
+				737EE6482D88DB570094E742 /* AppointmentFlow.swift in Sources */,
+				737EE6622D88E7DF0094E742 /* DoctorSpecialityFactory.swift in Sources */,
+				737EE6632D88E7DF0094E742 /* DoctorSpecialityCoordinator.swift in Sources */,
+				737EE6642D88E7DF0094E742 /* DoctorSpecialityView.swift in Sources */,
+				737EE64F2D88DDCF0094E742 /* TabBarItemType.swift in Sources */,
 				73C80FBD2D7CCFBC00E8B5CE /* AppFlows.swift in Sources */,
+				737EE6422D88DB1F0094E742 /* InboxFlow.swift in Sources */,
+				737EE6452D88DB3A0094E742 /* SearchFlow.swift in Sources */,
 				737EE6192D88A6D80094E742 /* SignupFactory.swift in Sources */,
 				73C80FBE2D7CCFBC00E8B5CE /* AppFlowView.swift in Sources */,
 				73DA6FAF2D57931600BA8114 /* DocDocApp.swift in Sources */,
+				735CFA352D89013B0078239C /* TabBarView.swift in Sources */,
 				737EE6262D88D2CE0094E742 /* CompleteProfileCoordinator.swift in Sources */,
 				737EE60E2D88A2A30094E742 /* OnboardingFactory.swift in Sources */,
+				737EE6522D88E5910094E742 /* NotificationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

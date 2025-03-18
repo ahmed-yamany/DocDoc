@@ -15,19 +15,16 @@ struct AppFlowView: View {
         Group {
             switch appManager.flow {
             case .splash:
-                Text("Splash")
-                    .task {
-                        try? await Task.sleep(for: .seconds(2))
-                        appManager.checkAuthentication()
-                    }
+                SplashView()
             case .notAuthenticated:
                 AuthenticatinFlow()
             case .authenticated:
-                Text("Auth")
+                TabBarFlow()
             }
         }
         .configureLocalization()
         .environmentObject(appManager)
+        .animation(.easeInOut(duration: 1), value: appManager.flow)
     }
 
     func repeate() {

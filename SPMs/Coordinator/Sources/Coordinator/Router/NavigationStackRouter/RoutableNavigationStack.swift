@@ -10,11 +10,9 @@ import SwiftUI
 @available(iOS 16.0, *)
 public struct RoutableNavigationStack<NavigationRouter: NavigationStackRouterInterface>: View {
     @ObservedObject private var router: NavigationRouter
-    let configurations: NavigationRouterConfigurations
 
-    public init(router: NavigationRouter, configurations: NavigationRouterConfigurations = .init()) {
+    public init(router: NavigationRouter) {
         _router = ObservedObject(wrappedValue: router)
-        self.configurations = configurations
     }
 
     public var body: some View {
@@ -22,13 +20,12 @@ public struct RoutableNavigationStack<NavigationRouter: NavigationStackRouterInt
             Group {
                 router.rootView
             }
-            .toolbar(configurations.hideNavigationBar ? .hidden : .visible, for: .navigationBar)
+            .toolbar(.visible, for: .navigationBar)
             .navigationDestination(for: AnyHashableView.self) {
-                $0.toolbar(configurations.hideNavigationBar ? .hidden : .visible, for: .navigationBar)
+                $0.toolbar(.visible, for: .navigationBar)
             }
             .fullScreenCover(item: $router.fullScreenCoverView) { $0 }
             .sheet(item: $router.sheetView) { $0 }
-            .navigationBarBackButtonImage(configurations.backButtonImage)
         }
     }
 }

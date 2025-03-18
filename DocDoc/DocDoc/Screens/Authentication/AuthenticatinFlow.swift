@@ -11,7 +11,7 @@ import SwiftUI
 struct AuthenticatinFlow: View {
     @StateObject private var router = NavigationStackRouter()
     @EnvironmentObject private var appManager: AppManager
-    
+
     var body: some View {
         RoutableNavigationStack(router: router)
             .onAppear {
