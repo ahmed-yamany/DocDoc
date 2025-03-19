@@ -9,7 +9,7 @@ import SwiftUI
 struct TabBarItem: Identifiable, Hashable, View {
     var id: TabBarItemType
     let title: String
-    var view: () -> AnyView
+    let view: () -> AnyView
 
     var body: some View {
         view()

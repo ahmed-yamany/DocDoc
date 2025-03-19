@@ -24,18 +24,5 @@ struct AppFlowView: View {
         }
         .configureLocalization()
         .environmentObject(appManager)
-        .animation(.easeInOut(duration: 1), value: appManager.flow)
-    }
-
-    func repeate() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-            if LocalizationSettings.shared.language == .english {
-                LocalizationSettings.shared.language = .arabic
-            } else {
-                LocalizationSettings.shared.language = .english
-            }
-
-            repeate()
-        }
     }
 }

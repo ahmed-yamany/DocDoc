@@ -9,11 +9,19 @@ import Coordinator
 import SwiftUI
 
 struct HomeFlow: View {
-    @EnvironmentObject private var router: NavigationStackRouter
-    @EnvironmentObject private var tabbarManager: TabBarFlowManager
+    @StateObject private var router = NavigationStackRouter()
+    @EnvironmentObject private var appManager: AppManager
 
     var body: some View {
-        HomeFactory.view(self)
+        RoutableNavigationStack(router: router)
+            .onAppear { // will be update to did load
+                setRoot()
+            }
+    }
+
+    private func setRoot() {
+        let view = HomeFactory.view(self)
+        router.setView(AnyHashableView(view), animated: false, completion: nil)
     }
 
     func navigateToNotifications() {
@@ -29,5 +37,14 @@ struct HomeFlow: View {
     func navigateToDoctorSpeciality() {
         let view = DoctorSpecialityFactory.view(self)
         router.push(AnyHashableView(view), animated: true, completion: nil)
+    }
+
+    func navigateToDoctorRecommendation() {
+        let view = DoctorRecommendationFactory.view(self)
+        router.push(AnyHashableView(view), animated: true, completion: nil)
+    }
+
+    func logout() {
+        appManager.logout()
     }
 }

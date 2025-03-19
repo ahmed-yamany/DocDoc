@@ -37,16 +37,6 @@ final class NavigationStackRouterTests: XCTestCase {
         XCTAssertEqual(sut.navigationStack.count, 1, "NavigationStackRouter Stack Count is not 1 when pushing two views")
     }
 
-    func test_push_WhenPushingWithAnimation_TransitionShouldEnableAnimation() {
-        sut.push(AnyHashableView(Text("")), animated: true, completion: nil)
-        XCTAssertFalse(sut.transaction.disablesAnimations, "Transiotion Should Enable Animation when animated is true")
-    }
-
-    func test_push_WhenPushingWithoutAnimation_TransitionShouldDisableAnimation() {
-        sut.push(AnyHashableView(Text("")), animated: false, completion: nil)
-        XCTAssertTrue(sut.transaction.disablesAnimations, "Transiotion Should Disable Animation when animated is false")
-    }
-
     func test_push_compoletion() {
         let expectation = XCTestExpectation()
 
@@ -218,9 +208,17 @@ final class NavigationStackRouterTests: XCTestCase {
         XCTAssertTrue(sut.navigationStack.count == 5)
     }
 
-    func test_dismiss_shouldRemovePresentedViews() {
+    func test_dismissFullScreen_shouldRemovePresentedFullScreenCoverView() {
         sut.present(AnyHashableView(Text("")), animated: false, presentationStyle: .fullScreen, transitionStyle: .partialCurl, completion: nil)
         XCTAssertNotNil(sut.fullScreenCoverView)
+        sut.dismiss(animated: false, completion: nil)
+        XCTAssertNil(sut.fullScreenCoverView)
+        XCTAssertNil(sut.sheetView)
+    }
+    
+    func test_dismissSheet_shouldRemovePresentedSheetView() {
+        sut.present(AnyHashableView(Text("")), animated: false, presentationStyle: .formSheet, transitionStyle: .partialCurl, completion: nil)
+        XCTAssertNotNil(sut.sheetView)
         sut.dismiss(animated: false, completion: nil)
         XCTAssertNil(sut.fullScreenCoverView)
         XCTAssertNil(sut.sheetView)

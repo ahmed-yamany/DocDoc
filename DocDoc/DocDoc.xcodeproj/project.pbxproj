@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		735CFA352D89013B0078239C /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735CFA342D89013A0078239C /* TabBarView.swift */; };
+		733A69792D8B02230074CE56 /* View+LifeCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733A69782D8B02230074CE56 /* View+LifeCycle.swift */; };
+		733E09932D8A4DD900947352 /* DoctorRecommendationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733E09912D8A4DD900947352 /* DoctorRecommendationCoordinator.swift */; };
+		733E09942D8A4DD900947352 /* DoctorRecommendationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733E09902D8A4DD900947352 /* DoctorRecommendationView.swift */; };
+		733E09952D8A4DD900947352 /* DoctorRecommendationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733E09922D8A4DD900947352 /* DoctorRecommendationFactory.swift */; };
 		7361CA5A2D63D66300968D6E /* DocDesignSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7361CA592D63D66300968D6E /* DocDesignSystem.framework */; };
 		7361CA5B2D63D66300968D6E /* DocDesignSystem.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7361CA592D63D66300968D6E /* DocDesignSystem.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		737EE60E2D88A2A30094E742 /* OnboardingFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737EE60D2D88A2A30094E742 /* OnboardingFactory.swift */; };
@@ -74,7 +77,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		735CFA342D89013A0078239C /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		733A69782D8B02230074CE56 /* View+LifeCycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+LifeCycle.swift"; sourceTree = "<group>"; };
+		733E09902D8A4DD900947352 /* DoctorRecommendationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorRecommendationView.swift; sourceTree = "<group>"; };
+		733E09912D8A4DD900947352 /* DoctorRecommendationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorRecommendationCoordinator.swift; sourceTree = "<group>"; };
+		733E09922D8A4DD900947352 /* DoctorRecommendationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorRecommendationFactory.swift; sourceTree = "<group>"; };
 		7361CA592D63D66300968D6E /* DocDesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DocDesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		737EE60D2D88A2A30094E742 /* OnboardingFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFactory.swift; sourceTree = "<group>"; };
 		737EE60F2D88A3F70094E742 /* SigninCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninCoordinator.swift; sourceTree = "<group>"; };
@@ -140,6 +146,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		733E098F2D8A4DBD00947352 /* DoctorRecommendation */ = {
+			isa = PBXGroup;
+			children = (
+				733E09902D8A4DD900947352 /* DoctorRecommendationView.swift */,
+				733E09912D8A4DD900947352 /* DoctorRecommendationCoordinator.swift */,
+				733E09922D8A4DD900947352 /* DoctorRecommendationFactory.swift */,
+			);
+			path = DoctorRecommendation;
+			sourceTree = "<group>";
+		};
 		737EE6132D88A5F60094E742 /* Sign up */ = {
 			isa = PBXGroup;
 			children = (
@@ -185,7 +201,6 @@
 			children = (
 				737EE6652D88F10D0094E742 /* TabBarItem.swift */,
 				737EE6312D88D8F10094E742 /* TabBarFlow.swift */,
-				735CFA342D89013A0078239C /* TabBarView.swift */,
 				737EE64E2D88DDCF0094E742 /* TabBarItemType.swift */,
 				737EE64C2D88DDA30094E742 /* TabBarFlowManager.swift */,
 				737EE6362D88DA030094E742 /* HomeFlow */,
@@ -208,11 +223,13 @@
 		737EE6362D88DA030094E742 /* HomeFlow */ = {
 			isa = PBXGroup;
 			children = (
+				733A69782D8B02230074CE56 /* View+LifeCycle.swift */,
 				737EE6372D88DA120094E742 /* HomeFlow.swift */,
 				737EE6392D88DA380094E742 /* Home */,
 				737EE6502D88E57E0094E742 /* Notification */,
 				737EE6572D88E6DC0094E742 /* FindNearby */,
 				737EE65E2D88E7CF0094E742 /* DoctorSpeciality */,
+				733E098F2D8A4DBD00947352 /* DoctorRecommendation */,
 			);
 			path = HomeFlow;
 			sourceTree = "<group>";
@@ -482,6 +499,9 @@
 				737EE65C2D88E6F50094E742 /* FindNearbyCoordinator.swift in Sources */,
 				737EE65D2D88E6F50094E742 /* FindNearbyFactory.swift in Sources */,
 				737EE6282D88D3240094E742 /* CompleteProfileFactory.swift in Sources */,
+				733E09932D8A4DD900947352 /* DoctorRecommendationCoordinator.swift in Sources */,
+				733E09942D8A4DD900947352 /* DoctorRecommendationView.swift in Sources */,
+				733E09952D8A4DD900947352 /* DoctorRecommendationFactory.swift in Sources */,
 				737EE64D2D88DDA30094E742 /* TabBarFlowManager.swift in Sources */,
 				737EE6542D88E5990094E742 /* NotificationCoordinator.swift in Sources */,
 				737EE62B2D88D5830094E742 /* OTPView.swift in Sources */,
@@ -489,6 +509,7 @@
 				737EE6622D88E7DF0094E742 /* DoctorSpecialityFactory.swift in Sources */,
 				737EE6632D88E7DF0094E742 /* DoctorSpecialityCoordinator.swift in Sources */,
 				737EE6642D88E7DF0094E742 /* DoctorSpecialityView.swift in Sources */,
+				733A69792D8B02230074CE56 /* View+LifeCycle.swift in Sources */,
 				737EE64F2D88DDCF0094E742 /* TabBarItemType.swift in Sources */,
 				73C80FBD2D7CCFBC00E8B5CE /* AppFlows.swift in Sources */,
 				737EE6422D88DB1F0094E742 /* InboxFlow.swift in Sources */,
@@ -496,7 +517,6 @@
 				737EE6192D88A6D80094E742 /* SignupFactory.swift in Sources */,
 				73C80FBE2D7CCFBC00E8B5CE /* AppFlowView.swift in Sources */,
 				73DA6FAF2D57931600BA8114 /* DocDocApp.swift in Sources */,
-				735CFA352D89013B0078239C /* TabBarView.swift in Sources */,
 				737EE6262D88D2CE0094E742 /* CompleteProfileCoordinator.swift in Sources */,
 				737EE60E2D88A2A30094E742 /* OnboardingFactory.swift in Sources */,
 				737EE6522D88E5910094E742 /* NotificationView.swift in Sources */,
@@ -632,7 +652,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = AWKSB6YK6X;
+				DEVELOPMENT_TEAM = 4U8DMJ33ZN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -640,7 +660,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -661,7 +681,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = AWKSB6YK6X;
+				DEVELOPMENT_TEAM = 4U8DMJ33ZN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -669,7 +689,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct OnboardingView: View {
     let coordinator: OnboardingCoordinator
-    
+
     var body: some View {
         VStack {
             Text("onboarding screen")

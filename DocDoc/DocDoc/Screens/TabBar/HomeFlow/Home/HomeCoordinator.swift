@@ -11,6 +11,9 @@ protocol HomeCoordinator {
     func navigateToNotifications()
     func navigateToFindNearbyDoctors()
     func navigateToDoctorSpeciality()
+    func navigateToDoctorRecommendation()
+    func logout()
+    
 }
 
 extension HomeFlow: HomeCoordinator {}

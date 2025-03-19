@@ -22,11 +22,11 @@ public class NavigationStackRouter: NavigationStackRouterInterface {
     @Published public var fullScreenCoverView: AnyHashableView?
     @Published public var sheetView: AnyHashableView?
 
-    var transaction = Transaction()
-
     public init() {}
 
     public func push(_ view: AnyHashableView, animated: Bool, completion: (() -> Void)?) {
+        var transaction = Transaction()
+
         UIView.performWithTransaction({
             transaction.disablesAnimations = !animated
 
@@ -54,6 +54,8 @@ public class NavigationStackRouter: NavigationStackRouterInterface {
     }
 
     public func setViews(_ views: [AnyHashableView], animated: Bool, completion: (() -> Void)?) {
+        var transaction = Transaction()
+
         UIView.performWithTransaction({
             transaction.disablesAnimations = !animated
 
@@ -110,6 +112,8 @@ public class NavigationStackRouter: NavigationStackRouterInterface {
     }
 
     public func pop(animated: Bool, completion: (() -> Void)?) {
+        var transaction = Transaction()
+
         UIView.performWithTransaction({
             transaction.disablesAnimations = !animated
 
@@ -120,6 +124,8 @@ public class NavigationStackRouter: NavigationStackRouterInterface {
     }
 
     public func popToRoot(animated: Bool, completion: (() -> Void)?) {
+        var transaction = Transaction()
+
         UIView.performWithTransaction({
             transaction.disablesAnimations = !animated
 
@@ -136,6 +142,8 @@ public class NavigationStackRouter: NavigationStackRouterInterface {
         transitionStyle: UIModalTransitionStyle,
         completion: (() -> Void)?
     ) {
+        var transaction = Transaction()
+
         UIView.performWithTransaction({
             transaction.disablesAnimations = !animated
 
@@ -153,6 +161,8 @@ public class NavigationStackRouter: NavigationStackRouterInterface {
     }
 
     public func dismiss(animated: Bool, completion: (() -> Void)?) {
+        var transaction = Transaction()
+
         UIView.performWithTransaction({
             transaction.disablesAnimations = !animated
 

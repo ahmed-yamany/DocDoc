@@ -3,7 +3,7 @@
 //  DocDoc
 //
 //  Created by Ahmed Yamany on 08/03/2025.
-//w
+// w
 import SwiftUI
 
 final class AppManager: ObservableObject {
@@ -15,5 +15,9 @@ final class AppManager: ObservableObject {
         } else {
             flow = .notAuthenticated
         }
+    }
+
+    func logout() {
+        flow = .notAuthenticated
     }
 }
