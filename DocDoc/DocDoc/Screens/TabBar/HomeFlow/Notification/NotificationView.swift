@@ -15,7 +15,7 @@ struct NotificationView: View {
                 Text("Notification View")
             }
         }
-        .setTabBarVisibility(.hidden)
+        .setTabBarHidden()
     }
 }
 

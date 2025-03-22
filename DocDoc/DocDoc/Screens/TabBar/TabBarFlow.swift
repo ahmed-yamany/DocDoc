@@ -20,7 +20,6 @@ struct TabBarFlow: View {
                             Image(systemName: "house")
                             Text(tabbarItem.title)
                         }
-                        .offset(y: tabbarItem == tabbarManager.selectedItem ? -30 : 0)
                     })
                     .tag(tabbarItem)
             }
@@ -28,24 +27,37 @@ struct TabBarFlow: View {
         }
         .animation(.default, value: tabbarManager.tabBarIsHidden)
         .environmentObject(tabbarManager)
-        .onPreferenceChange(HideTabBarPreferenceKey.self, perform: { hideTabbar in
-            Task(priority: .high) {
-                await hideTabbar ? tabbarManager.hideTabBar() : tabbarManager.showTabBar()
-            }
-        })
     }
 }
 
-struct HideTabBarPreferenceKey: PreferenceKey {
-    static let defaultValue: Bool = false
+struct TabBarVisibleModifier: ViewModifier {
+    @EnvironmentObject var tabbarManager: TabBarFlowManager
 
-    static func reduce(value: inout Bool, nextValue: () -> Bool) {
-        value = nextValue()
+    func body(content: Content) -> some View {
+        content
+            .lifecycle(onDidAppear: {
+                tabbarManager.showTabBar()
+            })
+    }
+}
+
+struct TabBarHideModifier: ViewModifier {
+    @EnvironmentObject var tabbarManager: TabBarFlowManager
+
+    func body(content: Content) -> some View {
+        content
+            .lifecycle(onWillAppear: {
+                tabbarManager.hideTabBar()
+            })
     }
 }
 
 extension View {
-    func setTabBarVisibility(_ visible: Visibility = .automatic) -> some View {
-        preference(key: HideTabBarPreferenceKey.self, value: visible == .hidden ? true : false)
+    func setTabBarVisible() -> some View {
+        modifier(TabBarVisibleModifier())
+    }
+
+    func setTabBarHidden() -> some View {
+        modifier(TabBarHideModifier())
     }
 }

@@ -166,11 +166,15 @@ final class NavigationStackRouterTests: XCTestCase {
 
     func test_popToRoot_completion() {
         let expectation = XCTestExpectation()
+        var counter = 0
 
         sut.setViews([Text("First View"), Text("Second View")].map { AnyHashableView($0) }, animated: true, completion: {
+            counter += 1
             expectation.fulfill()
+            
         })
         wait(for: [expectation], timeout: 1)
+        XCTAssertEqual(counter, 1)
     }
 
     func test_PresentFullScreenCover() {
