@@ -15,7 +15,7 @@ struct FindNearbyView: View {
                 Text("FindNearby View")
             }
         }
-        .setTabBarVisibility(.hidden)
+        .setTabBarHidden()
     }
 }
 

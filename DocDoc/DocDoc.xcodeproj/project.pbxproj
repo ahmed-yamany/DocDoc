@@ -76,7 +76,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		733A69782D8B02230074CE56 /* View+LifeCycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+LifeCycle.swift"; sourceTree = "<group>"; };
 		733E09902D8A4DD900947352 /* DoctorRecommendationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorRecommendationView.swift; sourceTree = "<group>"; };
 		733E09912D8A4DD900947352 /* DoctorRecommendationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorRecommendationCoordinator.swift; sourceTree = "<group>"; };
 		733E09922D8A4DD900947352 /* DoctorRecommendationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorRecommendationFactory.swift; sourceTree = "<group>"; };
@@ -222,7 +221,6 @@
 		737EE6362D88DA030094E742 /* HomeFlow */ = {
 			isa = PBXGroup;
 			children = (
-				733A69782D8B02230074CE56 /* View+LifeCycle.swift */,
 				737EE6372D88DA120094E742 /* HomeFlow.swift */,
 				737EE6392D88DA380094E742 /* Home */,
 				737EE6502D88E57E0094E742 /* Notification */,

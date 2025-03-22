@@ -43,7 +43,8 @@ struct HomeView: View {
                 }
             }
         }
-        .setTabBarVisibility(.visible)
+        
+        .setTabBarVisible()
     }
 }
 
