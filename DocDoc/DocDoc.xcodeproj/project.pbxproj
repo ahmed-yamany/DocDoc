@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		733A69792D8B02230074CE56 /* View+LifeCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733A69782D8B02230074CE56 /* View+LifeCycle.swift */; };
 		733E09932D8A4DD900947352 /* DoctorRecommendationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733E09912D8A4DD900947352 /* DoctorRecommendationCoordinator.swift */; };
 		733E09942D8A4DD900947352 /* DoctorRecommendationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733E09902D8A4DD900947352 /* DoctorRecommendationView.swift */; };
 		733E09952D8A4DD900947352 /* DoctorRecommendationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733E09922D8A4DD900947352 /* DoctorRecommendationFactory.swift */; };
@@ -509,7 +508,6 @@
 				737EE6622D88E7DF0094E742 /* DoctorSpecialityFactory.swift in Sources */,
 				737EE6632D88E7DF0094E742 /* DoctorSpecialityCoordinator.swift in Sources */,
 				737EE6642D88E7DF0094E742 /* DoctorSpecialityView.swift in Sources */,
-				733A69792D8B02230074CE56 /* View+LifeCycle.swift in Sources */,
 				737EE64F2D88DDCF0094E742 /* TabBarItemType.swift in Sources */,
 				73C80FBD2D7CCFBC00E8B5CE /* AppFlows.swift in Sources */,
 				737EE6422D88DB1F0094E742 /* InboxFlow.swift in Sources */,
