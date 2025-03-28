@@ -7,16 +7,18 @@
 
 import SwiftUI
 
-public struct RoutableNavigationController<NavigationRouter: NavigationControllerRouterInterface>: View {
-    @ObservedObject private var router: NavigationRouter
+public struct RoutableNavigationController: View {
+    @ObservedObject private var router: NavigationControllerRouter
 
-    public init(router: NavigationRouter) {
+    public init(router: NavigationControllerRouter) {
         _router = ObservedObject(wrappedValue: router)
     }
 
     public var body: some View {
         RepresentableViewController(viewController: router.navigationController)
             .ignoresSafeArea()
+            .fullScreenCover(item: $router.fullScreenCoverView) { $0 }
+            .sheet(item: $router.sheetView) { $0 }
     }
 
     public func setNavigationBarHidden(_ hidden: Bool, animated: Bool) {

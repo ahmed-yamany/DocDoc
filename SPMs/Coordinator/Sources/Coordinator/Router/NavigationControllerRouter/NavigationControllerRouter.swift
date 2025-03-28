@@ -6,36 +6,11 @@
 //
 
 import SwiftUI
-@MainActor
-public protocol NavigationControllerRouterInterface: Router, ObservableObject {
-    var navigationController: UINavigationController { get }
-    var presentedViewControllers: [UIViewController] { get }
-    var presentedViewController: UIViewController { get }
-}
 
 @MainActor
-public final class NavigationControllerRouter: NavigationControllerRouterInterface {
-    public var presentedViewControllers: [UIViewController] {
-        var stack: [UIViewController] = []
-
-        if var currentViewController = navigationController.presentedViewController {
-            stack.append(currentViewController)
-            while let nextViewController = currentViewController.presentedViewController {
-                currentViewController = nextViewController
-                stack.append(currentViewController)
-            }
-        }
-        return stack
-    }
-
-    /// The top-most presented view controller.
-    public var presentedViewController: UIViewController {
-        guard let presentedViewController = presentedViewControllers.last else {
-            return navigationController
-        }
-
-        return presentedViewController
-    }
+public final class NavigationControllerRouter: Router, ObservableObject, @unchecked Sendable {
+    @Published internal var fullScreenCoverView: AnyHashableView?
+    @Published internal var sheetView: AnyHashableView?
 
     public let navigationController: UINavigationController
 
@@ -110,18 +85,24 @@ public final class NavigationControllerRouter: NavigationControllerRouterInterfa
     public func present(
         _ view: AnyHashableView,
         animated: Bool,
-        presentationStyle: UIModalPresentationStyle,
-        transitionStyle: UIModalTransitionStyle,
+        style: PresentationStyle,
         completion: (() -> Void)?
     ) {
-        let viewController = UIHashableHostingController(rootView: view)
-        viewController.modalPresentationStyle = presentationStyle
-        viewController.modalTransitionStyle = transitionStyle
-        presentedViewController.present(viewController, animated: animated, completion: completion)
+        UIView.present(
+            view,
+            animated: animated,
+            style: style,
+            fullScreenCoverView: &fullScreenCoverView,
+            sheetView: &sheetView,
+            completion: completion
+        )
     }
 
     public func dismiss(animated: Bool, completion: (() -> Void)?) {
-        presentedViewController.dismiss(animated: animated, completion: completion ?? {})
+        UIView.performTransitionWithCompletion(animated: animated, action: {
+            sheetView = nil
+            fullScreenCoverView = nil
+        }, completion: completion)
     }
 
     public func popToView<T: View>(withType type: T.Type, animated: Bool, completion: (() -> Void)?) {

@@ -7,7 +7,7 @@
 
 import UIKit
 
-public extension UIView {
+internal extension UIView {
     /// Performs an action with a transaction, executing a completion block after the transaction finishes.
     /// - Parameters:
     ///   - action: A closure that performs the action.

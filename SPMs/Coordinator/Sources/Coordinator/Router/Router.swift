@@ -8,7 +8,7 @@
 import SwiftUI
 
 @MainActor
-public protocol Router {
+public protocol Router: Sendable {
     func push(_ view: AnyHashableView, animated: Bool, completion: (() -> Void)?)
     func push(contentsOf viewsToAppend: [AnyHashableView], animated: Bool, completion: (() -> Void)?)
 
@@ -29,9 +29,14 @@ public protocol Router {
     func present(
         _ view: AnyHashableView,
         animated: Bool,
-        presentationStyle: UIModalPresentationStyle,
-        transitionStyle: UIModalTransitionStyle,
+        style: PresentationStyle,
         completion: (() -> Void)?
     )
     func dismiss(animated: Bool, completion: (() -> Void)?)
+}
+
+public enum PresentationStyle: Int, @unchecked Sendable {
+    case sheet = 0
+    case fullScreen
+    case overFullScreen
 }

@@ -179,7 +179,7 @@ final class NavigationStackRouterTests: XCTestCase {
 
     func test_PresentFullScreenCover() {
         let view = AnyHashableView(Text("FullScreenCover View"))
-        sut.present(view, animated: false, presentationStyle: .fullScreen, transitionStyle: .coverVertical, completion: nil)
+        sut.present(view, animated: false, style: .fullScreen, completion: nil)
 
         XCTAssertNotNil(sut.fullScreenCoverView)
         XCTAssertNil(sut.sheetView)
@@ -187,7 +187,7 @@ final class NavigationStackRouterTests: XCTestCase {
 
     func test_PresentSheetView() {
         let view = AnyHashableView(Text("Sheet View"))
-        sut.present(view, animated: false, presentationStyle: .pageSheet, transitionStyle: .coverVertical, completion: nil)
+        sut.present(view, animated: false, style: .sheet, completion: nil)
 
         XCTAssertNotNil(sut.sheetView)
         XCTAssertNil(sut.fullScreenCoverView)
@@ -196,7 +196,7 @@ final class NavigationStackRouterTests: XCTestCase {
     func test_present_completionShouldBeCalled() {
         let expectation = XCTestExpectation()
 
-        sut.present(AnyHashableView(Text("")), animated: false, presentationStyle: .fullScreen, transitionStyle: .partialCurl, completion: {
+        sut.present(AnyHashableView(Text("")), animated: false, style: .fullScreen, completion: {
             expectation.fulfill()
         })
 
@@ -213,7 +213,7 @@ final class NavigationStackRouterTests: XCTestCase {
     }
 
     func test_dismissFullScreen_shouldRemovePresentedFullScreenCoverView() {
-        sut.present(AnyHashableView(Text("")), animated: false, presentationStyle: .fullScreen, transitionStyle: .partialCurl, completion: nil)
+        sut.present(AnyHashableView(Text("")), animated: false, style: .fullScreen, completion: nil)
         XCTAssertNotNil(sut.fullScreenCoverView)
         sut.dismiss(animated: false, completion: nil)
         XCTAssertNil(sut.fullScreenCoverView)
@@ -221,7 +221,7 @@ final class NavigationStackRouterTests: XCTestCase {
     }
     
     func test_dismissSheet_shouldRemovePresentedSheetView() {
-        sut.present(AnyHashableView(Text("")), animated: false, presentationStyle: .formSheet, transitionStyle: .partialCurl, completion: nil)
+        sut.present(AnyHashableView(Text("")), animated: false, style: .sheet, completion: nil)
         XCTAssertNotNil(sut.sheetView)
         sut.dismiss(animated: false, completion: nil)
         XCTAssertNil(sut.fullScreenCoverView)
@@ -231,7 +231,7 @@ final class NavigationStackRouterTests: XCTestCase {
     func test_dismiss_completionShouldBeCalled() {
         let expectation = XCTestExpectation()
 
-        sut.present(AnyHashableView(Text("")), animated: false, presentationStyle: .fullScreen, transitionStyle: .partialCurl, completion: nil)
+        sut.present(AnyHashableView(Text("")), animated: false, style: .fullScreen, completion: nil)
         sut.dismiss(animated: true, completion: {
             expectation.fulfill()
         })

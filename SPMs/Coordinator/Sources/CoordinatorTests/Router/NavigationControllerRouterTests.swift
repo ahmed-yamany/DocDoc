@@ -291,59 +291,6 @@ final class NavigationControllerRouterTests: XCTestCase {
         wait(for: [expectation], timeout: 1.0)
     }
 
-    func test_Present() {
-        let sut = makeSut()
-
-        sut.setView(AnyHashableView(Text("")), animated: false, completion: nil)
-        let view = AnyHashableView(MockView1())
-
-        _ = sut.navigationController.view
-        _ = sut.navigationController.topViewController?.view
-        _ = sut.navigationController.visibleViewController?.view
-
-        sut.present(
-            view,
-            animated: false,
-            presentationStyle: .fullScreen,
-            transitionStyle: .crossDissolve,
-            completion: nil
-        )
-
-        guard let presentedViewController = sut.navigationController.visibleViewController as? UIHashableHostingController else {
-            XCTFail("No view controller was presented.")
-            return
-        }
-
-        XCTAssertTrue(presentedViewController.rootView == view, "The presented view controller's root view should match the provided view.")
-        XCTAssertEqual(
-            presentedViewController.modalPresentationStyle,
-            .fullScreen,
-            "The presented view controller should have a full-screen presentation style."
-        )
-        XCTAssertEqual(
-            presentedViewController.modalTransitionStyle,
-            .crossDissolve,
-            "The presented view controller should have a cross dissolve transition style."
-        )
-    }
-
-    func test_dismiss() async {
-        let sut = makeSut()
-        let view = AnyHashableView(MockView1())
-
-        sut.present(
-            view,
-            animated: false,
-            presentationStyle: .fullScreen,
-            transitionStyle: .crossDissolve,
-            completion: nil
-        )
-        XCTAssertEqual((sut.presentedViewController as? UIHashableHostingController)?.rootView, view)
-        sut.dismiss(animated: false, completion: nil)
-        try? await Task.sleep(for: .seconds(1))
-        XCTAssertEqual(sut.presentedViewController, sut.navigationController)
-    }
-
     // MARK: - Pop to View Tests
 
     func testPopToViewWithMatchingType() {

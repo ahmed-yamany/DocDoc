@@ -8,35 +8,21 @@
 import SwiftUI
 
 @MainActor
-public protocol NavigationStackRouterInterface: Router, ObservableObject {
-    var rootView: AnyHashableView? { get set }
-    var navigationStack: [AnyHashableView] { get set }
-    var fullScreenCoverView: AnyHashableView? { get set }
-    var sheetView: AnyHashableView? { get set }
-}
-
-@MainActor
-public class NavigationStackRouter: NavigationStackRouterInterface {
-    @Published public var rootView: AnyHashableView?
-    @Published public var navigationStack: [AnyHashableView] = []
-    @Published public var fullScreenCoverView: AnyHashableView?
-    @Published public var sheetView: AnyHashableView?
+public class NavigationStackRouter: Router, ObservableObject {
+    @Published public internal(set) var rootView: AnyHashableView?
+    @Published public internal(set) var navigationStack: [AnyHashableView] = []
+    @Published public internal(set) var fullScreenCoverView: AnyHashableView?
+    @Published public internal(set) var sheetView: AnyHashableView?
 
     public init() {}
 
     public func push(_ view: AnyHashableView, animated: Bool, completion: (() -> Void)?) {
-        var transaction = Transaction()
-
-        UIView.performWithTransaction({
-            transaction.disablesAnimations = !animated
-
+        UIView.performTransitionWithCompletion(animated: animated, action: {
             let hashableView = view
-            withTransaction(transaction) {
-                if rootView != nil {
-                    navigationStack.append(hashableView)
-                } else {
-                    rootView = hashableView
-                }
+            if rootView != nil {
+                navigationStack.append(hashableView)
+            } else {
+                rootView = hashableView
             }
         }, completion: completion)
     }
@@ -54,32 +40,26 @@ public class NavigationStackRouter: NavigationStackRouterInterface {
     }
 
     public func setViews(_ views: [AnyHashableView], animated: Bool, completion: (() -> Void)?) {
-        var transaction = Transaction()
+        UIView.performTransitionWithCompletion(animated: animated, action: {
+            guard let firstView = views.first else {
+                rootView = nil
+                navigationStack = []
+                return
+            }
 
-        UIView.performWithTransaction({
-            transaction.disablesAnimations = !animated
+            rootView = firstView
 
-            withTransaction(transaction) {
-                guard let firstView = views.first else {
-                    rootView = nil
-                    navigationStack = []
-                    return
+            if views.count > 1 {
+                let intermediateViews = views.dropFirst().dropLast()
+                let lastView = views.last
+
+                navigationStack = intermediateViews.map { $0 }
+
+                if let lastView {
+                    navigationStack.append(lastView)
                 }
-
-                rootView = firstView
-
-                if views.count > 1 {
-                    let intermediateViews = views.dropFirst().dropLast()
-                    let lastView = views.last
-
-                    navigationStack = intermediateViews.map { $0 }
-
-                    if let lastView {
-                        navigationStack.append(lastView)
-                    }
-                } else {
-                    navigationStack = []
-                }
+            } else {
+                navigationStack = []
             }
         }, completion: completion)
     }
@@ -112,70 +92,43 @@ public class NavigationStackRouter: NavigationStackRouterInterface {
     }
 
     public func pop(animated: Bool, completion: (() -> Void)?) {
-        var transaction = Transaction()
-
-        UIView.performWithTransaction({
-            transaction.disablesAnimations = !animated
-
-            withTransaction(transaction) {
-                _ = navigationStack.removeLast()
-            }
+        UIView.performTransitionWithCompletion(animated: animated, action: {
+            _ = navigationStack.removeLast()
         }, completion: completion)
     }
 
     public func popToRoot(animated: Bool, completion: (() -> Void)?) {
-        var transaction = Transaction()
-
-        UIView.performWithTransaction({
-            transaction.disablesAnimations = !animated
-
-            withTransaction(transaction) {
-                navigationStack.removeAll()
-            }
+        UIView.performTransitionWithCompletion(animated: animated, action: {
+            navigationStack.removeAll()
         }, completion: completion)
     }
 
     public func present(
         _ view: AnyHashableView,
         animated: Bool,
-        presentationStyle: UIModalPresentationStyle,
-        transitionStyle: UIModalTransitionStyle,
+        style: PresentationStyle,
         completion: (() -> Void)?
     ) {
-        var transaction = Transaction()
-
-        UIView.performWithTransaction({
-            transaction.disablesAnimations = !animated
-
-            withTransaction(transaction) {
-                switch presentationStyle {
-                case .fullScreen:
-                    fullScreenCoverView = view
-                    sheetView = nil
-                default:
-                    sheetView = view
-                    fullScreenCoverView = nil
-                }
-            }
-        }, completion: completion)
+        UIView.present(
+            view,
+            animated: animated,
+            style: style,
+            fullScreenCoverView: &fullScreenCoverView,
+            sheetView: &sheetView,
+            completion: completion
+        )
     }
 
     public func dismiss(animated: Bool, completion: (() -> Void)?) {
-        var transaction = Transaction()
-
-        UIView.performWithTransaction({
-            transaction.disablesAnimations = !animated
-
-            withTransaction(transaction) {
-                sheetView = nil
-                fullScreenCoverView = nil
-            }
+        UIView.performTransitionWithCompletion(animated: animated, action: {
+            sheetView = nil
+            fullScreenCoverView = nil
         }, completion: completion)
     }
 
     public func popToView<T: View>(withType type: T.Type, animated: Bool, completion: (() -> Void)?) {
         if let index = navigationStack.lastIndex(where: { $0.type == T.self }) {
-            UIView.performWithTransaction({
+            UIView.performTransitionWithCompletion(animated: animated, action: {
                 navigationStack = Array(navigationStack[...index])
             }, completion: completion)
         } else if rootView?.type == T.self {

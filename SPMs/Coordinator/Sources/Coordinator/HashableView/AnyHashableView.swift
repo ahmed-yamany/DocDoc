@@ -12,8 +12,8 @@ public struct AnyHashableView: View, Hashable, Identifiable {
     public var id: UUID = UUID()
     public var type: Any.Type
 
-    public init<T: View>(_ routableView: T) {
-        _view = AnyView(routableView)
+    public init<T: View>(_ view: T) {
+        _view = AnyView(view)
         type = T.self
     }
 
@@ -27,5 +27,12 @@ public struct AnyHashableView: View, Hashable, Identifiable {
 
     public var body: some View {
         _view
+    }
+}
+
+extension AnyHashableView {
+    public init<T: View>(_ view: T, type: Any.Type) {
+        _view = AnyView(view)
+        self.type = type
     }
 }
