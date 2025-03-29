@@ -26,6 +26,7 @@ struct AppFlowView: View {
             }
         }
         .configureLocalization()
+        .setAppTheme(appManager.them)
         .environmentObject(appManager)
         .animation(.easeInOut(duration: 0.6), value: appManager.flow)
     }

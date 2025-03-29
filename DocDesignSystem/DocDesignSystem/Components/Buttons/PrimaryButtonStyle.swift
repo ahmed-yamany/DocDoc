@@ -9,6 +9,7 @@ import SwiftUI
 
 public struct PrimaryButtonStyle: ButtonStyle {
     @Environment(\.isEnabled) private var isEnabled
+    @Environment(\.theme) private var theme: AppTheme
     
     public func makeBody(configuration: Configuration) -> some View {
         configuration.label
@@ -16,15 +17,15 @@ public struct PrimaryButtonStyle: ButtonStyle {
             .frame(height: DesignSystem.Tokens.Measurements.Height.primaryButton)
             .background(backgroundColor(configuration))
             .clipShape(RoundedRectangle(cornerRadius: DesignSystem.Foundations.Measurements.BorderRadius.medium))
-            .foregroundStyle(DesignSystem.Tokens.Colors.primaryButtonForgroundColor)
+            .foregroundStyle(theme.colors.primaryButtonForgroundColor)
             .font(.caption1, weight: .semiBold)
     }
 
     private func backgroundColor(_ configuration: Configuration) -> Color {
         if configuration.isPressed {
-            DesignSystem.Tokens.Colors.primaryButtonPressBackground
+            theme.colors.primaryButtonPressBackground
         } else {
-            DesignSystem.Tokens.Colors.primaryButtonBackground
+            theme.colors.primaryButtonBackground
         }
     }
 }

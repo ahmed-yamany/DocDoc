@@ -16,6 +16,7 @@ public struct PrimaryTextField<Leading: View, Trailing: View>: View {
     @ViewBuilder var leading: Leading
     @ViewBuilder var trailing: Trailing
     @Environment(\.primaryTextFieldState) var state: PrimaryTextFieldState
+    @Environment(\.theme) private var theme: AppTheme
 
     public init(
         text: Binding<String>,
@@ -41,7 +42,7 @@ public struct PrimaryTextField<Leading: View, Trailing: View>: View {
         .padding(.horizontal, DesignSystem.Tokens.Measurements.Padding.textfieldContent)
         .frame(maxWidth: .infinity)
         .frame(height: DesignSystem.Tokens.Measurements.Height.primaryTextField)
-        .background(shape.fill(DesignSystem.Tokens.Colors.primaryTextFieldBackground))
+        .background(shape.fill(theme.colors.primaryTextFieldBackground))
         .overlay(
             shape
                 .stroke(lineWidth: DesignSystem.Foundations.Measurements.BorderWidth.default)
@@ -67,11 +68,11 @@ public struct PrimaryTextField<Leading: View, Trailing: View>: View {
     private var borderColor: Color {
         switch state {
         case .normal:
-            DesignSystem.Tokens.Colors.primaryTextFieldBorder
+            theme.colors.primaryTextFieldBorder
         case .error:
-            DesignSystem.Tokens.Colors.primaryError
+            theme.colors.primaryError
         case .focused:
-            DesignSystem.Tokens.Colors.primary
+            theme.colors.primary
         }
     }
 }

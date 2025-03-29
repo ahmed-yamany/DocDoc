@@ -13,6 +13,13 @@
 		7324FB1E2D6A6CDE0008B2A5 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7324FB1D2D6A6CDE0008B2A5 /* Language.swift */; };
 		7324FB202D6A6CFC0008B2A5 /* Language+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7324FB1F2D6A6CFC0008B2A5 /* Language+Layout.swift */; };
 		7324FB222D6A6D1B0008B2A5 /* Language+Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7324FB212D6A6D1B0008B2A5 /* Language+Bundle.swift */; };
+		734BEBF42D981AD50069091B /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734BEBF32D981AD50069091B /* LogoView.swift */; };
+		734BEBF62D981FED0069091B /* View+setAppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734BEBF52D981FED0069091B /* View+setAppTheme.swift */; };
+		734BEBF92D9820490069091B /* ThemeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734BEBF82D9820490069091B /* ThemeColors.swift */; };
+		734BEBFB2D9820500069091B /* ThemeFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734BEBFA2D9820500069091B /* ThemeFonts.swift */; };
+		734BEBFD2D9820560069091B /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734BEBFC2D9820560069091B /* AppTheme.swift */; };
+		734BEC072D9831840069091B /* View+setupScreenDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734BEC062D9831840069091B /* View+setupScreenDesign.swift */; };
+		734BEC092D9832D10069091B /* AuthenticationHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734BEC082D9832D10069091B /* AuthenticationHeaderView.swift */; };
 		734CA1B32D8EFE12002E472C /* View+LifeCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734CA1B22D8EFE12002E472C /* View+LifeCycle.swift */; };
 		735DAFC02D6A027C00A95EA5 /* LocalizationSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735DAFBF2D6A027C00A95EA5 /* LocalizationSettings.swift */; };
 		735DAFC22D6A02C300A95EA5 /* view+configureLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735DAFC12D6A02C300A95EA5 /* view+configureLocalization.swift */; };
@@ -46,7 +53,6 @@
 		739D1D122D63DA3D006E2DE3 /* Files+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739D1D112D63DA3D006E2DE3 /* Files+Generated.swift */; };
 		739D1D192D63DA68006E2DE3 /* AssetsTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739D1D132D63DA68006E2DE3 /* AssetsTokens.swift */; };
 		739D1D1A2D63DA68006E2DE3 /* FontConvertible+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739D1D172D63DA68006E2DE3 /* FontConvertible+.swift */; };
-		739D1D1B2D63DA68006E2DE3 /* ColorTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739D1D142D63DA68006E2DE3 /* ColorTokens.swift */; };
 		739D1D1C2D63DA68006E2DE3 /* IconTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739D1D152D63DA68006E2DE3 /* IconTokens.swift */; };
 		739D1D922D63DED4006E2DE3 /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739D1D912D63DED4006E2DE3 /* DesignSystem.swift */; };
 		739D1D952D63E533006E2DE3 /* TM+Heights.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739D1D942D63E533006E2DE3 /* TM+Heights.swift */; };
@@ -60,6 +66,13 @@
 		7324FB1D2D6A6CDE0008B2A5 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		7324FB1F2D6A6CFC0008B2A5 /* Language+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Language+Layout.swift"; sourceTree = "<group>"; };
 		7324FB212D6A6D1B0008B2A5 /* Language+Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Language+Bundle.swift"; sourceTree = "<group>"; };
+		734BEBF32D981AD50069091B /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
+		734BEBF52D981FED0069091B /* View+setAppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+setAppTheme.swift"; sourceTree = "<group>"; };
+		734BEBF82D9820490069091B /* ThemeColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeColors.swift; sourceTree = "<group>"; };
+		734BEBFA2D9820500069091B /* ThemeFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeFonts.swift; sourceTree = "<group>"; };
+		734BEBFC2D9820560069091B /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
+		734BEC062D9831840069091B /* View+setupScreenDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+setupScreenDesign.swift"; sourceTree = "<group>"; };
+		734BEC082D9832D10069091B /* AuthenticationHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationHeaderView.swift; sourceTree = "<group>"; };
 		734CA1B22D8EFE12002E472C /* View+LifeCycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+LifeCycle.swift"; sourceTree = "<group>"; };
 		735DAFBF2D6A027C00A95EA5 /* LocalizationSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationSettings.swift; sourceTree = "<group>"; };
 		735DAFC12D6A02C300A95EA5 /* view+configureLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "view+configureLocalization.swift"; sourceTree = "<group>"; };
@@ -94,7 +107,6 @@
 		739D1D0F2D63DA06006E2DE3 /* ios.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ios.pdf; sourceTree = "<group>"; };
 		739D1D112D63DA3D006E2DE3 /* Files+Generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Files+Generated.swift"; sourceTree = "<group>"; };
 		739D1D132D63DA68006E2DE3 /* AssetsTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsTokens.swift; sourceTree = "<group>"; };
-		739D1D142D63DA68006E2DE3 /* ColorTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTokens.swift; sourceTree = "<group>"; };
 		739D1D152D63DA68006E2DE3 /* IconTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconTokens.swift; sourceTree = "<group>"; };
 		739D1D172D63DA68006E2DE3 /* FontConvertible+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FontConvertible+.swift"; sourceTree = "<group>"; };
 		739D1D912D63DED4006E2DE3 /* DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
@@ -135,6 +147,25 @@
 			path = Language;
 			sourceTree = "<group>";
 		};
+		734BEBF22D981AC20069091B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				734BEBF32D981AD50069091B /* LogoView.swift */,
+				734BEC082D9832D10069091B /* AuthenticationHeaderView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		734BEBF72D9820420069091B /* AppTheme */ = {
+			isa = PBXGroup;
+			children = (
+				734BEBFC2D9820560069091B /* AppTheme.swift */,
+				734BEBFA2D9820500069091B /* ThemeFonts.swift */,
+				734BEBF82D9820490069091B /* ThemeColors.swift */,
+			);
+			path = AppTheme;
+			sourceTree = "<group>";
+		};
 		735DAFBC2D6A025F00A95EA5 /* Localization */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +202,8 @@
 				734CA1B22D8EFE12002E472C /* View+LifeCycle.swift */,
 				7378B90E2D85B11F00DF4B08 /* View+primaryTextFieldState.swift */,
 				73B9A9122D85D3D1009D4622 /* View+presentationFlixibleHeight.swift */,
+				734BEBF52D981FED0069091B /* View+setAppTheme.swift */,
+				734BEC062D9831840069091B /* View+setupScreenDesign.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -277,8 +310,8 @@
 		739D1D182D63DA68006E2DE3 /* Tokens */ = {
 			isa = PBXGroup;
 			children = (
+				734BEBF72D9820420069091B /* AppTheme */,
 				735DAFD72D6A56EE00A95EA5 /* DesignSystem+Tokens.swift */,
-				739D1D142D63DA68006E2DE3 /* ColorTokens.swift */,
 				739D1D132D63DA68006E2DE3 /* AssetsTokens.swift */,
 				739D1D152D63DA68006E2DE3 /* IconTokens.swift */,
 				735DAFC82D6A0B1700A95EA5 /* FontToken.swift */,
@@ -343,6 +376,7 @@
 		73DA71262D579EE200BA8114 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				734BEBF22D981AC20069091B /* Views */,
 				0ECE174A2D84C78700F623B3 /* SocailMedia */,
 				73795F8B2D7336A70038DF24 /* TextFields */,
 				73795DF32D732A4C0038DF24 /* Buttons */,
@@ -471,6 +505,7 @@
 				735DAFDA2D6A573500A95EA5 /* DesignSystem+Foundations.swift in Sources */,
 				739D1D0D2D63D9F2006E2DE3 /* FontFamily.swift in Sources */,
 				739D1D192D63DA68006E2DE3 /* AssetsTokens.swift in Sources */,
+				734BEBFD2D9820560069091B /* AppTheme.swift in Sources */,
 				73795F8F2D733C1F0038DF24 /* EmailTextField.swift in Sources */,
 				739D1D1A2D63DA68006E2DE3 /* FontConvertible+.swift in Sources */,
 				73795DF52D732A620038DF24 /* PrimaryButtonStyle.swift in Sources */,
@@ -479,7 +514,7 @@
 				73795F8D2D7336AC0038DF24 /* PrimaryTextField.swift in Sources */,
 				0E169EAA2D7FC7B00022654F /* SocialMediaView.swift in Sources */,
 				735DAFD22D6A44D300A95EA5 /* Text+Font.swift in Sources */,
-				739D1D1B2D63DA68006E2DE3 /* ColorTokens.swift in Sources */,
+				734BEBFB2D9820500069091B /* ThemeFonts.swift in Sources */,
 				735DAFCB2D6A0B1700A95EA5 /* FM+Padding.swift in Sources */,
 				735DAFCC2D6A0B1700A95EA5 /* FM+BorderWidth.swift in Sources */,
 				73B9A9132D85D3D1009D4622 /* View+presentationFlixibleHeight.swift in Sources */,
@@ -494,11 +529,16 @@
 				735DAFD02D6A0B1700A95EA5 /* FM+Spacing.swift in Sources */,
 				739D1D1C2D63DA68006E2DE3 /* IconTokens.swift in Sources */,
 				739D1D922D63DED4006E2DE3 /* DesignSystem.swift in Sources */,
+				734BEBF62D981FED0069091B /* View+setAppTheme.swift in Sources */,
 				739D1D952D63E533006E2DE3 /* TM+Heights.swift in Sources */,
 				735DAFC22D6A02C300A95EA5 /* view+configureLocalization.swift in Sources */,
+				734BEC072D9831840069091B /* View+setupScreenDesign.swift in Sources */,
+				734BEBF42D981AD50069091B /* LogoView.swift in Sources */,
+				734BEBF92D9820490069091B /* ThemeColors.swift in Sources */,
 				7324FB1E2D6A6CDE0008B2A5 /* Language.swift in Sources */,
 				7379605B2D733FC20038DF24 /* PhoneTextField.swift in Sources */,
 				735DAFC02D6A027C00A95EA5 /* LocalizationSettings.swift in Sources */,
+				734BEC092D9832D10069091B /* AuthenticationHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

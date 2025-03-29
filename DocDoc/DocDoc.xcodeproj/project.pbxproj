@@ -10,6 +10,8 @@
 		733E09932D8A4DD900947352 /* DoctorRecommendationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733E09912D8A4DD900947352 /* DoctorRecommendationCoordinator.swift */; };
 		733E09942D8A4DD900947352 /* DoctorRecommendationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733E09902D8A4DD900947352 /* DoctorRecommendationView.swift */; };
 		733E09952D8A4DD900947352 /* DoctorRecommendationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733E09922D8A4DD900947352 /* DoctorRecommendationFactory.swift */; };
+		734BEC012D98249E0069091B /* SiginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734BEC002D98249E0069091B /* SiginViewModel.swift */; };
+		734BEC042D982C590069091B /* SigninUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734BEC032D982C590069091B /* SigninUseCase.swift */; };
 		7361CA5A2D63D66300968D6E /* DocDesignSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7361CA592D63D66300968D6E /* DocDesignSystem.framework */; };
 		7361CA5B2D63D66300968D6E /* DocDesignSystem.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7361CA592D63D66300968D6E /* DocDesignSystem.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		737EE60E2D88A2A30094E742 /* OnboardingFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737EE60D2D88A2A30094E742 /* OnboardingFactory.swift */; };
@@ -79,6 +81,8 @@
 		733E09902D8A4DD900947352 /* DoctorRecommendationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorRecommendationView.swift; sourceTree = "<group>"; };
 		733E09912D8A4DD900947352 /* DoctorRecommendationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorRecommendationCoordinator.swift; sourceTree = "<group>"; };
 		733E09922D8A4DD900947352 /* DoctorRecommendationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorRecommendationFactory.swift; sourceTree = "<group>"; };
+		734BEC002D98249E0069091B /* SiginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiginViewModel.swift; sourceTree = "<group>"; };
+		734BEC032D982C590069091B /* SigninUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninUseCase.swift; sourceTree = "<group>"; };
 		7361CA592D63D66300968D6E /* DocDesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DocDesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		737EE60D2D88A2A30094E742 /* OnboardingFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFactory.swift; sourceTree = "<group>"; };
 		737EE60F2D88A3F70094E742 /* SigninCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninCoordinator.swift; sourceTree = "<group>"; };
@@ -152,6 +156,32 @@
 				733E09922D8A4DD900947352 /* DoctorRecommendationFactory.swift */,
 			);
 			path = DoctorRecommendation;
+			sourceTree = "<group>";
+		};
+		734BEBFF2D9824850069091B /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				73C80FBF2D7CCFC000E8B5CE /* SigninView.swift */,
+				734BEC002D98249E0069091B /* SiginViewModel.swift */,
+				737EE60F2D88A3F70094E742 /* SigninCoordinator.swift */,
+				737EE6112D88A4480094E742 /* SigninFactory.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		734BEC022D982C4C0069091B /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				734BEC032D982C590069091B /* SigninUseCase.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		734BEC052D982F4F0069091B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		737EE6132D88A5F60094E742 /* Sign up */ = {
@@ -326,9 +356,9 @@
 		73C80FC02D7CCFC000E8B5CE /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				73C80FBF2D7CCFC000E8B5CE /* SigninView.swift */,
-				737EE60F2D88A3F70094E742 /* SigninCoordinator.swift */,
-				737EE6112D88A4480094E742 /* SigninFactory.swift */,
+				734BEC052D982F4F0069091B /* Data */,
+				734BEC022D982C4C0069091B /* Domain */,
+				734BEBFF2D9824850069091B /* Presentation */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -488,10 +518,12 @@
 				737EE62F2D88D5930094E742 /* OTPFactory.swift in Sources */,
 				737EE63F2D88DA500094E742 /* HomeFactory.swift in Sources */,
 				737EE6242D88D2BE0094E742 /* CompleteProfile.swift in Sources */,
+				734BEC012D98249E0069091B /* SiginViewModel.swift in Sources */,
 				73C80FCC2D7CCFC000E8B5CE /* AuthenticatinFlow.swift in Sources */,
 				73C80FBC2D7CCFBC00E8B5CE /* AppManager.swift in Sources */,
 				737EE6562D88E5A10094E742 /* NotificationFactory.swift in Sources */,
 				737EE6322D88D8F10094E742 /* TabBarFlow.swift in Sources */,
+				734BEC042D982C590069091B /* SigninUseCase.swift in Sources */,
 				737EE65B2D88E6F50094E742 /* FindNearbyView.swift in Sources */,
 				737EE65C2D88E6F50094E742 /* FindNearbyCoordinator.swift in Sources */,
 				737EE65D2D88E6F50094E742 /* FindNearbyFactory.swift in Sources */,

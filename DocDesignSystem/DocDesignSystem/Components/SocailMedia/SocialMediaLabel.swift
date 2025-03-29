@@ -8,6 +8,7 @@
 import SwiftUI
 
 public struct SocialMediaLabel: View {
+    @Environment(\.theme) private var theme: AppTheme
     let icon: Image
     let size: CGFloat = 46
 
@@ -21,7 +22,7 @@ public struct SocialMediaLabel: View {
             .aspectRatio(contentMode: .fit)
             .frame(width: size * 0.6, height: size * 0.6)
             .frame(width: size, height: size)
-            .background(DesignSystem.Tokens.Colors.primaryButtonForgroundColor)
+            .background(theme.colors.primaryButtonForgroundColor)
             .clipShape(RoundedRectangle(cornerRadius: size / 2))
     }
 }
