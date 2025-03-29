@@ -10,6 +10,7 @@ import SwiftUI
 extension DesignSystem.Tokens.Colors {
     static let primary: Color = .blue100
     static let tint: Color = .gray100
+    static let primaryText: Color = .gray100
     
     static var primaryBackGroundColor: Color { .white }
     

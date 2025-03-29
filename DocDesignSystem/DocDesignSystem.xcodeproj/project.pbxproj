@@ -13,6 +13,8 @@
 		7324FB1E2D6A6CDE0008B2A5 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7324FB1D2D6A6CDE0008B2A5 /* Language.swift */; };
 		7324FB202D6A6CFC0008B2A5 /* Language+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7324FB1F2D6A6CFC0008B2A5 /* Language+Layout.swift */; };
 		7324FB222D6A6D1B0008B2A5 /* Language+Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7324FB212D6A6D1B0008B2A5 /* Language+Bundle.swift */; };
+		734BEBEF2D964F5D0069091B /* Utilities in Frameworks */ = {isa = PBXBuildFile; productRef = 734BEBEE2D964F5D0069091B /* Utilities */; };
+		734BEBF12D9651190069091B /* AnimatablePrimaryTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734BEBF02D9651190069091B /* AnimatablePrimaryTextField.swift */; };
 		734CA1B32D8EFE12002E472C /* View+LifeCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734CA1B22D8EFE12002E472C /* View+LifeCycle.swift */; };
 		735DAFC02D6A027C00A95EA5 /* LocalizationSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735DAFBF2D6A027C00A95EA5 /* LocalizationSettings.swift */; };
 		735DAFC22D6A02C300A95EA5 /* view+configureLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735DAFC12D6A02C300A95EA5 /* view+configureLocalization.swift */; };
@@ -60,6 +62,7 @@
 		7324FB1D2D6A6CDE0008B2A5 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		7324FB1F2D6A6CFC0008B2A5 /* Language+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Language+Layout.swift"; sourceTree = "<group>"; };
 		7324FB212D6A6D1B0008B2A5 /* Language+Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Language+Bundle.swift"; sourceTree = "<group>"; };
+		734BEBF02D9651190069091B /* AnimatablePrimaryTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatablePrimaryTextField.swift; sourceTree = "<group>"; };
 		734CA1B22D8EFE12002E472C /* View+LifeCycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+LifeCycle.swift"; sourceTree = "<group>"; };
 		735DAFBF2D6A027C00A95EA5 /* LocalizationSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationSettings.swift; sourceTree = "<group>"; };
 		735DAFC12D6A02C300A95EA5 /* view+configureLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "view+configureLocalization.swift"; sourceTree = "<group>"; };
@@ -109,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				734BEBEF2D964F5D0069091B /* Utilities in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,6 +137,13 @@
 				7324FB212D6A6D1B0008B2A5 /* Language+Bundle.swift */,
 			);
 			path = Language;
+			sourceTree = "<group>";
+		};
+		734BEBED2D964F5D0069091B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		735DAFBC2D6A025F00A95EA5 /* Localization */ = {
@@ -194,6 +205,7 @@
 		73795F8B2D7336A70038DF24 /* TextFields */ = {
 			isa = PBXGroup;
 			children = (
+				734BEBF02D9651190069091B /* AnimatablePrimaryTextField.swift */,
 				7378B90C2D85B0DC00DF4B08 /* PrimaryTextFieldState.swift */,
 				73795F8C2D7336AC0038DF24 /* PrimaryTextField.swift */,
 				73795F8E2D733C1F0038DF24 /* EmailTextField.swift */,
@@ -301,6 +313,7 @@
 			children = (
 				73C688022D63D23000F91C06 /* swiftgen.yml */,
 				73DA6FC82D57943600BA8114 /* DocDesignSystem */,
+				734BEBED2D964F5D0069091B /* Frameworks */,
 				73DA6FBD2D57941D00BA8114 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -380,6 +393,7 @@
 			);
 			name = DocDesignSystem;
 			packageProductDependencies = (
+				734BEBEE2D964F5D0069091B /* Utilities */,
 			);
 			productName = DocDesignSystem;
 			productReference = 73DA6FBC2D57941D00BA8114 /* DocDesignSystem.framework */;
@@ -482,6 +496,7 @@
 				739D1D1B2D63DA68006E2DE3 /* ColorTokens.swift in Sources */,
 				735DAFCB2D6A0B1700A95EA5 /* FM+Padding.swift in Sources */,
 				735DAFCC2D6A0B1700A95EA5 /* FM+BorderWidth.swift in Sources */,
+				734BEBF12D9651190069091B /* AnimatablePrimaryTextField.swift in Sources */,
 				73B9A9132D85D3D1009D4622 /* View+presentationFlixibleHeight.swift in Sources */,
 				0E169EA82D7FC3170022654F /* SocialMediaLabel.swift in Sources */,
 				734CA1B32D8EFE12002E472C /* View+LifeCycle.swift in Sources */,
@@ -750,6 +765,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		734BEBEE2D964F5D0069091B /* Utilities */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Utilities;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 73DA6FB32D57941D00BA8114 /* Project object */;
 }

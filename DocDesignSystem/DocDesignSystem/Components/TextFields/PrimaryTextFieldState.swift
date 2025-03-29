@@ -6,7 +6,7 @@
 //
 import Foundation
 
-public enum PrimaryTextFieldState {
+public enum PrimaryTextFieldState: Equatable {
     case normal
     case error(String)
     case focused

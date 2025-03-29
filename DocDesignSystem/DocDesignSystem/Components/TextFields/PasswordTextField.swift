@@ -6,24 +6,32 @@
 //
 
 import SwiftUI
+import Utilities
 
 public struct PasswordTextField: View {
-    @Binding var text: String
+    @Binding var text: Password
     @State private var isSecured: Bool = true
+    @State private var fieldText: String
+    @Environment(\.primaryTextFieldState) private var primaryTextFieldState
 
-    public init(text: Binding<String>) {
+    public init(text: Binding<Password>) {
         _text = text
+        _fieldText = State(wrappedValue: "")
     }
 
     public var body: some View {
         PrimaryTextField(
-            text: $text,
+            text: $fieldText,
             placeHolder: L10n.Authentication.password,
             isSecured: isSecured,
             trailing: { trailingImage()
             }
         )
         .textContentType(.password)
+        .environment(\.primaryTextFieldState, state())
+        .onChange(of: fieldText) { newValue in
+            text = Password(value: newValue)
+        }
     }
 
     private func trailingImage() -> some View {
@@ -38,5 +46,14 @@ public struct PasswordTextField: View {
                 }
             }
         }.buttonStyle(.plain)
+    }
+    
+    func state() -> PrimaryTextFieldState {
+        do {
+            try text.validate()
+            return primaryTextFieldState
+        } catch {
+            return .error(error.localizedDescription)
+        }
     }
 }

@@ -21,6 +21,8 @@ struct SignupView: View {
                 coordinator.navigateToSignIn()
             }
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(.white)
     }
 }
 

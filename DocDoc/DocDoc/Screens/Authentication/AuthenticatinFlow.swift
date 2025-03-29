@@ -14,6 +14,7 @@ struct AuthenticatinFlow: View {
 
     var body: some View {
         RoutableNavigationStack(router: router)
+            .animation(.easeInOut(duration: 0.6), value: router.rootView)
             .onAppear {
                 navigateToOnboarding()
             }
@@ -50,6 +51,8 @@ struct AuthenticatinFlow: View {
 
     func navigateToOTPVerification() {
         let view = OTPFactory.view(self)
-        router.push(AnyHashableView(view), animated: true, completion: nil)
+//        router.push(AnyHashableView(view), animated: true, completion: nil)
+        router.present(AnyHashableView(view), animated: true, style: .sheet, completion: nil)
+        router.present(AnyHashableView(view), animated: true, style: .sheet, completion: nil)
     }
 }

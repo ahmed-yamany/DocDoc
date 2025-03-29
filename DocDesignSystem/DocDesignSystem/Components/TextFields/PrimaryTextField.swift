@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+
+
 public struct PrimaryTextField<Leading: View, Trailing: View>: View {
     @Binding var text: String
 
@@ -15,7 +17,7 @@ public struct PrimaryTextField<Leading: View, Trailing: View>: View {
 
     @ViewBuilder var leading: Leading
     @ViewBuilder var trailing: Trailing
-    @Environment(\.primaryTextFieldState) var state: PrimaryTextFieldState
+    @Environment(\.primaryTextFieldState) private var state: PrimaryTextFieldState
 
     public init(
         text: Binding<String>,
@@ -33,20 +35,33 @@ public struct PrimaryTextField<Leading: View, Trailing: View>: View {
     }
 
     public var body: some View {
-        HStack {
-            leading
-            textField
-            trailing
+        VStack {
+            HStack {
+                leading
+                textField
+                trailing
+            }
+            .padding(.horizontal, DesignSystem.Tokens.Measurements.Padding.textfieldContent)
+            .frame(maxWidth: .infinity)
+            .frame(height: DesignSystem.Tokens.Measurements.Height.primaryTextField)
+            .background(shape.fill(DesignSystem.Tokens.Colors.primaryTextFieldBackground))
+            .foregroundStyle(DesignSystem.Tokens.Colors.primaryText)
+            .overlay(
+                shape
+                    .stroke(lineWidth: DesignSystem.Foundations.Measurements.BorderWidth.default)
+                    .fill(borderColor)
+            )
+            
+            switch state {
+            case .normal:
+                EmptyView()
+            case .error(let string):
+                Text(string)
+                    .foregroundStyle(.red)
+            case .focused:
+                EmptyView()
+            }
         }
-        .padding(.horizontal, DesignSystem.Tokens.Measurements.Padding.textfieldContent)
-        .frame(maxWidth: .infinity)
-        .frame(height: DesignSystem.Tokens.Measurements.Height.primaryTextField)
-        .background(shape.fill(DesignSystem.Tokens.Colors.primaryTextFieldBackground))
-        .overlay(
-            shape
-                .stroke(lineWidth: DesignSystem.Foundations.Measurements.BorderWidth.default)
-                .fill(borderColor)
-        )
     }
 
     private var textField: some View {

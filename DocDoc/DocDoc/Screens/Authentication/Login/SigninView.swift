@@ -6,26 +6,21 @@
 //
 
 import SwiftUI
+import DocDesignSystem
 
-struct SigninView: View {
+struct SigninView<ViewModel: SiginViewModel>: View {
     let coordinator: SigninCoordinator
+    @ObservedObject var viewModel: ViewModel
 
     var body: some View {
         VStack {
-            Text("sign in screen")
-
-            Button("navigate to forgot passwored") {
-                coordinator.navigateToForgotPassword()
-            }
-
-            Button("navigate to Sign up") {
-                coordinator.navigateToSignup()
-            }
-
-            Button("navigate to home") {
-                coordinator.navigateCheckAuthentication()
-            }
+            EmailTextField(text: $viewModel.email)
+            PasswordTextField(text: $viewModel.password)
+            
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .padding()
+        .background(.white)
     }
 }
 
