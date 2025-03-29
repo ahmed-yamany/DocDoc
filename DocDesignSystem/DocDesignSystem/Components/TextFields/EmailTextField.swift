@@ -6,30 +6,44 @@
 //
 
 import SwiftUI
+import Utilities
 
 public struct EmailTextField: View {
-    @Environment(\.primaryTextFieldState) var primaryTextFieldState
-    @Binding var text: String
+    @Environment(\.primaryTextFieldState) private var primaryTextFieldState
+    @Binding var text: Email
+    @State private var fieldText: String
 
-    public init(text: Binding<String>) {
+    public init(text: Binding<Email>) {
         _text = text
+        _fieldText = State(wrappedValue: text.wrappedValue.value)
     }
 
     public var body: some View {
         PrimaryTextField(
-            text: $text,
+            text: $fieldText,
             placeHolder: L10n.Authentication.email
         )
         .keyboardType(.emailAddress)
         .textContentType(.emailAddress)
-        .environment(\.primaryTextFieldState, validate() ? .error("") : primaryTextFieldState)
+        .environment(\.primaryTextFieldState, state())
+        .onChange(of: fieldText) { newValue in
+            text = Email(value: newValue)
+        }
     }
 
-    func validate() -> Bool {
-        false
+    func state() -> PrimaryTextFieldState {
+        do {
+            try text.validate()
+            return primaryTextFieldState
+        } catch {
+            return .error(error.localizedDescription)
+        }
     }
 }
 
-// #Preview {
-//    EmailTextField(text: .constant("mahmoud"), hasError: .constant(true))
-// }
+@available(iOS 17.0, *)
+#Preview {
+    @Previewable @State var text: Email = Email(value: "")
+    EmailTextField(text: $text)
+        .padding()
+}

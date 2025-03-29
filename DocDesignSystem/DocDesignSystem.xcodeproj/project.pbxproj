@@ -121,6 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				734BEBEF2D964F5D0069091B /* Utilities in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +165,13 @@
 				734BEBF82D9820490069091B /* ThemeColors.swift */,
 			);
 			path = AppTheme;
+		sourceTree = "<group>";
+		};
+		734BEBED2D964F5D0069091B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		735DAFBC2D6A025F00A95EA5 /* Localization */ = {
@@ -227,6 +235,7 @@
 		73795F8B2D7336A70038DF24 /* TextFields */ = {
 			isa = PBXGroup;
 			children = (
+				734BEBF02D9651190069091B /* AnimatablePrimaryTextField.swift */,
 				7378B90C2D85B0DC00DF4B08 /* PrimaryTextFieldState.swift */,
 				73795F8C2D7336AC0038DF24 /* PrimaryTextField.swift */,
 				73795F8E2D733C1F0038DF24 /* EmailTextField.swift */,
@@ -334,6 +343,7 @@
 			children = (
 				73C688022D63D23000F91C06 /* swiftgen.yml */,
 				73DA6FC82D57943600BA8114 /* DocDesignSystem */,
+				734BEBED2D964F5D0069091B /* Frameworks */,
 				73DA6FBD2D57941D00BA8114 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -414,6 +424,7 @@
 			);
 			name = DocDesignSystem;
 			packageProductDependencies = (
+				734BEBEE2D964F5D0069091B /* Utilities */,
 			);
 			productName = DocDesignSystem;
 			productReference = 73DA6FBC2D57941D00BA8114 /* DocDesignSystem.framework */;
@@ -517,6 +528,7 @@
 				734BEBFB2D9820500069091B /* ThemeFonts.swift in Sources */,
 				735DAFCB2D6A0B1700A95EA5 /* FM+Padding.swift in Sources */,
 				735DAFCC2D6A0B1700A95EA5 /* FM+BorderWidth.swift in Sources */,
+				734BEBF12D9651190069091B /* AnimatablePrimaryTextField.swift in Sources */,
 				73B9A9132D85D3D1009D4622 /* View+presentationFlixibleHeight.swift in Sources */,
 				0E169EA82D7FC3170022654F /* SocialMediaLabel.swift in Sources */,
 				734CA1B32D8EFE12002E472C /* View+LifeCycle.swift in Sources */,
@@ -790,6 +802,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		734BEBEE2D964F5D0069091B /* Utilities */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Utilities;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 73DA6FB32D57941D00BA8114 /* Project object */;
 }
