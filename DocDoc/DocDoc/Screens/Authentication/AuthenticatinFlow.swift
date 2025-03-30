@@ -6,6 +6,7 @@
 //
 
 import Coordinator
+import DocDesignSystem
 import SwiftUI
 
 struct AuthenticatinFlow: View {
@@ -14,10 +15,11 @@ struct AuthenticatinFlow: View {
 
     var body: some View {
         RoutableNavigationStack(router: router)
-            .animation(.easeInOut(duration: 0.6), value: router.rootView)
-            .onAppear {
+            .navigationRootTransition(.asymmetric(insertion: .move(edge: .trailing), removal: .move(edge: .leading)))
+            .lifecycle(onDidAppear: {
                 navigateToOnboarding()
-            }
+            })
+            .animation(.easeInOut(duration: 0.6), value: router.rootView)
     }
 
     func navigateToOnboarding() {
@@ -51,8 +53,6 @@ struct AuthenticatinFlow: View {
 
     func navigateToOTPVerification() {
         let view = OTPFactory.view(self)
-//        router.push(AnyHashableView(view), animated: true, completion: nil)
-        router.present(AnyHashableView(view), animated: true, style: .sheet, completion: nil)
-        router.present(AnyHashableView(view), animated: true, style: .sheet, completion: nil)
+        router.push(AnyHashableView(view), animated: true, completion: nil)
     }
 }

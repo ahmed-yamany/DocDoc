@@ -7,6 +7,6 @@
 
 import SwiftUI
 
-extension DesignSystem.Tokens.Assets {
+public extension DesignSystem.Tokens.Assets {
     static let logo: Image = Image(.logo)
 }

@@ -52,6 +52,8 @@
 		737EE6642D88E7DF0094E742 /* DoctorSpecialityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737EE65F2D88E7DF0094E742 /* DoctorSpecialityView.swift */; };
 		737EE6662D88F10D0094E742 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737EE6652D88F10D0094E742 /* TabBarItem.swift */; };
 		7394EFA32D7C71B6005B7C2D /* Coordinator in Frameworks */ = {isa = PBXBuildFile; productRef = 7394EFA22D7C71B6005B7C2D /* Coordinator */; };
+		73A223472D98E9B400456BDB /* TabBarVisibleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A223462D98E9B400456BDB /* TabBarVisibleModifier.swift */; };
+		73A223492D98EB7500456BDB /* TabBarItem+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A223482D98EB7500456BDB /* TabBarItem+.swift */; };
 		73C80FBC2D7CCFBC00E8B5CE /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C80FB82D7CCFBC00E8B5CE /* AppManager.swift */; };
 		73C80FBD2D7CCFBC00E8B5CE /* AppFlows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C80FB92D7CCFBC00E8B5CE /* AppFlows.swift */; };
 		73C80FBE2D7CCFBC00E8B5CE /* AppFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C80FBA2D7CCFBC00E8B5CE /* AppFlowView.swift */; };
@@ -122,6 +124,8 @@
 		737EE6612D88E7DF0094E742 /* DoctorSpecialityFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorSpecialityFactory.swift; sourceTree = "<group>"; };
 		737EE6652D88F10D0094E742 /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
 		7394EF2C2D7C623D005B7C2D /* Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		73A223462D98E9B400456BDB /* TabBarVisibleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVisibleModifier.swift; sourceTree = "<group>"; };
+		73A223482D98EB7500456BDB /* TabBarItem+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TabBarItem+.swift"; sourceTree = "<group>"; };
 		73C688792D63D47C00F91C06 /* DocDesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DocDesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73C80FB82D7CCFBC00E8B5CE /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 		73C80FB92D7CCFBC00E8B5CE /* AppFlows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlows.swift; sourceTree = "<group>"; };
@@ -228,8 +232,10 @@
 			isa = PBXGroup;
 			children = (
 				737EE6652D88F10D0094E742 /* TabBarItem.swift */,
+				73A223482D98EB7500456BDB /* TabBarItem+.swift */,
 				737EE6312D88D8F10094E742 /* TabBarFlow.swift */,
 				737EE64E2D88DDCF0094E742 /* TabBarItemType.swift */,
+				73A223462D98E9B400456BDB /* TabBarVisibleModifier.swift */,
 				737EE64C2D88DDA30094E742 /* TabBarFlowManager.swift */,
 				737EE6362D88DA030094E742 /* HomeFlow */,
 				737EE6462D88DB4A0094E742 /* AppointmentFlow */,
@@ -535,6 +541,7 @@
 				737EE6542D88E5990094E742 /* NotificationCoordinator.swift in Sources */,
 				737EE62B2D88D5830094E742 /* OTPView.swift in Sources */,
 				737EE6482D88DB570094E742 /* AppointmentFlow.swift in Sources */,
+				73A223472D98E9B400456BDB /* TabBarVisibleModifier.swift in Sources */,
 				737EE6622D88E7DF0094E742 /* DoctorSpecialityFactory.swift in Sources */,
 				737EE6632D88E7DF0094E742 /* DoctorSpecialityCoordinator.swift in Sources */,
 				737EE6642D88E7DF0094E742 /* DoctorSpecialityView.swift in Sources */,
@@ -543,6 +550,7 @@
 				737EE6422D88DB1F0094E742 /* InboxFlow.swift in Sources */,
 				737EE6452D88DB3A0094E742 /* SearchFlow.swift in Sources */,
 				737EE6192D88A6D80094E742 /* SignupFactory.swift in Sources */,
+				73A223492D98EB7500456BDB /* TabBarItem+.swift in Sources */,
 				73C80FBE2D7CCFBC00E8B5CE /* AppFlowView.swift in Sources */,
 				73DA6FAF2D57931600BA8114 /* DocDocApp.swift in Sources */,
 				737EE6262D88D2CE0094E742 /* CompleteProfileCoordinator.swift in Sources */,

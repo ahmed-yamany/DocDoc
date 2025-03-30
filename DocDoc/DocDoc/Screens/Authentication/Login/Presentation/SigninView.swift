@@ -24,9 +24,15 @@ public struct SigninView<ViewModel: SiginViewModel>: View {
                 )
                 
                 VStack(spacing: DesignSystem.Foundations.Measurements.Spacing.medium) {
-                    EmailTextField(text: $viewModel.email)
+                    EmailTextField(email: $viewModel.email)
                     
-                    PasswordTextField(text: $viewModel.password)
+                    PasswordTextField(password: $viewModel.password)
+                    
+                    PhoneTextField(
+                        countries: [],
+                        selectedCountry: $viewModel.country,
+                        phoneNumber: $viewModel.phoneNumber
+                    )
                     
                     HStack {
                         Button {

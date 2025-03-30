@@ -6,11 +6,15 @@
 //
 
 import SwiftUI
+import Utilities
+import DocDesignSystem
 
 public protocol SiginViewModel: ObservableObject {
-    var email: String { get set }
-    var password: String { get set }
+    var email: Email { get set }
+    var password: Password { get set }
     var rememberMe: Bool { get set }
+    var country: Country { get set }
+    var phoneNumber: PhoneNumber  { get set }
 
     func didTapforgotPassword()
     func didTapLogin()
@@ -19,9 +23,11 @@ public protocol SiginViewModel: ObservableObject {
 
 @Observable
 final class SigninViewModelImp: SiginViewModel {
-    var email: String = ""
-    var password: String = ""
+    var email: Email = ""
+    var password: Password = ""
     var rememberMe: Bool = false
+    var country: Country = .init(icon: Image(uiImage: .add), name: "Egypt", code: "20")
+    var phoneNumber: PhoneNumber = ""
     
     let coordinator: SigninCoordinator
     let useCase: SigninUseCase

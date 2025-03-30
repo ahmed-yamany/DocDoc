@@ -6,6 +6,7 @@
 //
 
 import Coordinator
+import DocDesignSystem
 import SwiftUI
 
 struct HomeFlow: View {
@@ -14,9 +15,9 @@ struct HomeFlow: View {
 
     var body: some View {
         RoutableNavigationStack(router: router)
-            .onAppear { // will be update to did load
+            .lifecycle(onDidLoad: {
                 setRoot()
-            }
+            })
     }
 
     private func setRoot() {

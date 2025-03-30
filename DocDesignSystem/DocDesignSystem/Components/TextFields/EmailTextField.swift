@@ -10,30 +10,30 @@ import Utilities
 
 public struct EmailTextField: View {
     @Environment(\.primaryTextFieldState) private var primaryTextFieldState
-    @Binding var text: Email
-    @State private var fieldText: String
+    @Binding var email: Email
+    @State private var text: String
 
-    public init(text: Binding<Email>) {
-        _text = text
-        _fieldText = State(wrappedValue: text.wrappedValue.value)
+    public init(email: Binding<Email>) {
+        _email = email
+        _text = State(wrappedValue: email.wrappedValue.value)
     }
 
     public var body: some View {
         PrimaryTextField(
-            text: $fieldText,
+            text: $text,
             placeHolder: L10n.Authentication.email
         )
         .keyboardType(.emailAddress)
         .textContentType(.emailAddress)
         .environment(\.primaryTextFieldState, state())
-        .onChange(of: fieldText) { newValue in
-            text = Email(value: newValue)
+        .onChange(of: text) { newValue in
+            email = Email(value: newValue)
         }
     }
 
     func state() -> PrimaryTextFieldState {
         do {
-            try text.validate()
+            try email.validate()
             return primaryTextFieldState
         } catch {
             return .error(error.localizedDescription)
@@ -44,6 +44,6 @@ public struct EmailTextField: View {
 @available(iOS 17.0, *)
 #Preview {
     @Previewable @State var text: Email = Email(value: "")
-    EmailTextField(text: $text)
+    EmailTextField(email: $text)
         .padding()
 }

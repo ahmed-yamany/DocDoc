@@ -6,27 +6,40 @@
 //
 
 import SwiftUI
+import Utilities
 
-struct Country: Identifiable {
-    var id = UUID()
+public struct Country: Identifiable {
+    public var id = UUID()
 
-    let icon: Image
-    let name: String
-    let code: String
+    public let icon: Image
+    public let name: String
+    public let code: String
+
+    public init(id: UUID = UUID(), icon: Image, name: String, code: String) {
+        self.id = id
+        self.icon = icon
+        self.name = name
+        self.code = code
+    }
 }
 
 public struct PhoneTextField: View {
     let countries: [Country]
     @Binding var selectedCountry: Country
-    @Binding var text: String
+    @Binding var phoneNumber: PhoneNumber
 
     @State private var showCountryPicker: Bool = false
-    @State private var height: CGFloat = 0.3
+    @State private var text: String = ""
 
-    init(countries: [Country], selectedCountry: Binding<Country>, text: Binding<String>) {
+    public init(
+        countries: [Country],
+        selectedCountry: Binding<Country>,
+        phoneNumber: Binding<PhoneNumber>
+    ) {
         self.countries = countries
-        _text = text
+        _phoneNumber = phoneNumber
         _selectedCountry = selectedCountry
+        _text = State(wrappedValue: phoneNumber.wrappedValue.value)
     }
 
     public var body: some View {
@@ -35,12 +48,14 @@ public struct PhoneTextField: View {
             placeHolder: L10n.Localizable.yourNumber,
             leading: { leadingView }
         )
+        .onChange(of: text) { newValue in
+            phoneNumber = PhoneNumber(value: newValue, code: selectedCountry.code)
+        }
         .sheet(isPresented: $showCountryPicker) {
             VStack {
                 Text("Hello, World!")
                 Text("Hello, World!")
                 Text("Hello, World!")
-           
             }
             .padding()
             .presentationFlixibleHeight()
@@ -58,12 +73,13 @@ public struct PhoneTextField: View {
                     .padding(.vertical, 16)
             }
         }
+        .animation(.default, value: showCountryPicker)
     }
 }
 
 @available(iOS 17.0, *)
 #Preview {
-    @Previewable @State var text = ""
+    @Previewable @State var text: PhoneNumber = ""
     @Previewable @State var country: Country = .init(icon: Image(.alert), name: "Egypt", code: "20")
     let countries: [Country] = [
     ]
@@ -71,7 +87,6 @@ public struct PhoneTextField: View {
     PhoneTextField(
         countries: countries,
         selectedCountry: $country,
-        text: $text
+        phoneNumber: $text
     )
-
 }
